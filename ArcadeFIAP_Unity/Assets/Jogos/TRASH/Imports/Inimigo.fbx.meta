@@ -1,0 +1,159 @@
+fileFormatVersion: 2
+guid: faf21a6ef13fdf64e95090c4ab22c499
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: base_espinha
+    100002: base_persco__o
+    100004: cabe__a
+    100006: calvicula_dir
+    100008: chapeu
+    100010: clavicula
+    100012: clavicula_esq
+    100014: corpo
+    100016: cotovelo_dir
+    100018: cotovelo_esq
+    100020: dedo_dir
+    100022: dedo_dir 1
+    100024: dedo_dir 2
+    100026: dedo_dir 3
+    100028: dedo_dir 4
+    100030: dedo_dir 5
+    100032: dedo_dir 6
+    100034: dedo_dir 7
+    100036: dedo_dir 8
+    100038: dedo_dir1
+    100040: dedo_dir2
+    100042: dedo_dir3
+    100044: dedo_esq
+    100046: dedo_esq 1
+    100048: dedo_esq 2
+    100050: dedo_esq 3
+    100052: dedo_esq 4
+    100054: dedo_esq 5
+    100056: dedo_esq 6
+    100058: dedo_esq 7
+    100060: dedo_esq 8
+    100062: dedo_esq1
+    100064: dedo_esq2
+    100066: dedo_esq3
+    100068: espinha
+    100070: espinha_2
+    100072: espinha_3
+    100074: LatadeLixo1
+    100076: ombro_dir
+    100078: ombro_esq
+    100080: pelvis1
+    100082: pesco__o
+    100084: pulso_dir
+    100086: pulso_esq
+    100088: //RootNode
+    400000: base_espinha
+    400002: base_persco__o
+    400004: cabe__a
+    400006: calvicula_dir
+    400008: chapeu
+    400010: clavicula
+    400012: clavicula_esq
+    400014: corpo
+    400016: cotovelo_dir
+    400018: cotovelo_esq
+    400020: dedo_dir
+    400022: dedo_dir 1
+    400024: dedo_dir 2
+    400026: dedo_dir 3
+    400028: dedo_dir 4
+    400030: dedo_dir 5
+    400032: dedo_dir 6
+    400034: dedo_dir 7
+    400036: dedo_dir 8
+    400038: dedo_dir1
+    400040: dedo_dir2
+    400042: dedo_dir3
+    400044: dedo_esq
+    400046: dedo_esq 1
+    400048: dedo_esq 2
+    400050: dedo_esq 3
+    400052: dedo_esq 4
+    400054: dedo_esq 5
+    400056: dedo_esq 6
+    400058: dedo_esq 7
+    400060: dedo_esq 8
+    400062: dedo_esq1
+    400064: dedo_esq2
+    400066: dedo_esq3
+    400068: espinha
+    400070: espinha_2
+    400072: espinha_3
+    400074: LatadeLixo1
+    400076: ombro_dir
+    400078: ombro_esq
+    400080: pelvis1
+    400082: pesco__o
+    400084: pulso_dir
+    400086: pulso_esq
+    400088: //RootNode
+    2300000: chapeu
+    2300002: corpo
+    2300004: LatadeLixo1
+    3300000: chapeu
+    3300002: corpo
+    3300004: LatadeLixo1
+    4300000: LatadeLixo1
+    4300002: chapeu
+    4300004: corpo
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
