@@ -10,8 +10,8 @@ public class RostoJogo : MonoBehaviour {
 	public void Iniciar (InfoJogo pJogo) {
 		jogo = pJogo;
 		nome.text = jogo.nome;
-		GetComponentInChildren<Button>().onClick.AddListener(delegate() {
-			MenuJogos.I.JogarJogo(jogo.id);
+		GetComponentInChildren<Button>().onClick.AddListener( delegate () {
+			MenuJogos.I.JogarJogo(jogo);
 		});
 	}
 }

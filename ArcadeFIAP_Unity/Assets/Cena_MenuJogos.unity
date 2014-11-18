@@ -227,10 +227,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabRosto: {fileID: 11400010, guid: 6ed8c048714d82a4e9c19b9105b1c437, type: 2}
-  listaJogos:
-  - nome: TRASH
-    id: jogo-trash
-    cena: Jogo_TRASH
   posicoes:
   - {fileID: 827380302}
 --- !u!1 &827380301
@@ -287,6 +283,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7460382da96d7b0409a1465b0e6b5881, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  arquivo: {fileID: 4900000, guid: e38c90fcd1fa6fc4bb4cc48149e90d47, type: 3}
+  listaJogos: []
+  estaEmJogo: 0
+  intervaloVoto: 10
+  timerVoto: 0
+  mostrarTelaVoto: 0
 --- !u!4 &1054653375
 Transform:
   m_ObjectHideFlags: 0
