@@ -2,13 +2,19 @@
 
 Repositório com o software para o arcade dos projetos integrados dos alunos de Programação de Jogos Digitais da FIAP.
 
----
-
-### Funcionalidades
+## Funcionalidades
 
 - Controles padronizados
 - Interface para navegação entre jogos
 - Sistema de votos automático depois de partidas com mais de 1 minuto de duração
+
+## Problemas de integração
+
+### 1S_2014
+
+### 1S_2015
+
+
 
 ---
 
