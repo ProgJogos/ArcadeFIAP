@@ -12,7 +12,7 @@ GameObject:
   m_Layer: 0
   m_Name: ArcadeFIAP
   m_TagString: Untagged
-  m_Icon: {fileID: -1003283189, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -39,7 +39,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d2af02e98a80bf40b4001cb1be3aa29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ingame: 1
+  jogos:
+  - {fileID: 0}
+  - {fileID: 0}
+  ativo: 0
+  transicao: .349999994
+  easing: 9
+  primeiroFrame: 0
+  votacaoPermitida: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -64,12 +64,6 @@ public static class ArcadeFIAP
 		// jogos = new List<string> ();
 
 	}
-	
-	public static void CarregarJogo (string nome)
-	{
-		Application.LoadLevel (nome + "_Inicio");
-		GerenteArcade.i.ingame = true;
-	}
 }
 
 
