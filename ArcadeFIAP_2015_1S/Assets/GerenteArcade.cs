@@ -6,7 +6,7 @@ public class GerenteArcade : MonoBehaviour
 	public static GerenteArcade i;
 	public static string cenaInicialJogo;
 	public static float timerJogo;
-	public static bool votacaoPermitida;
+	public static bool votacaoPermitida = false;
 	
 	void Awake ()
 	{
