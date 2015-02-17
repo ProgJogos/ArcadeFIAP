@@ -1,0 +1,276 @@
+fileFormatVersion: 2
+guid: 17cc089aaabe2ef4a969deb631dd7c4d
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: bra__o_baixo_dir
+    100002: bra__o_baixo_esq
+    100004: bra__o_cima_dir
+    100006: bra__o_cima_esq
+    100008: cabe__a
+    100010: cabe__a_robo
+    100012: centro_olho_dir
+    100014: centro_olho_esq
+    100016: clavicula
+    100018: corpo_centro
+    100020: cotovelo_dir
+    100022: cotovelo_dir 1
+    100024: cotovelo_esq
+    100026: cotovelo_esq 1
+    100028: dedo1_dir
+    100030: dedo__esq
+    100032: dentes
+    100034: detalhe_centro
+    100036: eixo_joelho_dir
+    100038: eixo_joelho_esq
+    100040: eixo_mao_dir
+    100042: eixo_mao_esq
+    100044: eixo_ombro_dir
+    100046: eixo_ombro_esq
+    100048: esfera_exaustor
+    100050: esfera_peito
+    100052: exaustor
+    100054: joelho_dir
+    100056: joelho_esq
+    100058: mao_dir
+    100060: mao_esq
+    100062: nariz
+    100064: olho_dir
+    100066: olho_dir 1
+    100068: olho_esq
+    100070: olho_esq 1
+    100072: ombro_dir
+    100074: ombro_esq
+    100076: p___dir
+    100078: p___esq
+    100080: pe_dir
+    100082: pe_esq
+    100084: pelvis
+    100086: perna_baixo_dir
+    100088: perna_baixo_esq
+    100090: perna_cima_dir
+    100092: perna_cima_esq
+    100094: perna_dir
+    100096: perna_esq
+    100098: pesco__o
+    100100: //RootNode
+    100102: sobrancelha_dir
+    100104: sobrancelha_dir 1
+    100106: sobrancelha_esq
+    100108: sobrancelha_esq 1
+    100110: torso
+    400000: bra__o_baixo_dir
+    400002: bra__o_baixo_esq
+    400004: bra__o_cima_dir
+    400006: bra__o_cima_esq
+    400008: cabe__a
+    400010: cabe__a_robo
+    400012: centro_olho_dir
+    400014: centro_olho_esq
+    400016: clavicula
+    400018: corpo_centro
+    400020: cotovelo_dir
+    400022: cotovelo_dir 1
+    400024: cotovelo_esq
+    400026: cotovelo_esq 1
+    400028: dedo1_dir
+    400030: dedo__esq
+    400032: dentes
+    400034: detalhe_centro
+    400036: eixo_joelho_dir
+    400038: eixo_joelho_esq
+    400040: eixo_mao_dir
+    400042: eixo_mao_esq
+    400044: eixo_ombro_dir
+    400046: eixo_ombro_esq
+    400048: esfera_exaustor
+    400050: esfera_peito
+    400052: exaustor
+    400054: joelho_dir
+    400056: joelho_esq
+    400058: mao_dir
+    400060: mao_esq
+    400062: nariz
+    400064: olho_dir
+    400066: olho_dir 1
+    400068: olho_esq
+    400070: olho_esq 1
+    400072: ombro_dir
+    400074: ombro_esq
+    400076: p___dir
+    400078: p___esq
+    400080: pe_dir
+    400082: pe_esq
+    400084: pelvis
+    400086: perna_baixo_dir
+    400088: perna_baixo_esq
+    400090: perna_cima_dir
+    400092: perna_cima_esq
+    400094: perna_dir
+    400096: perna_esq
+    400098: pesco__o
+    400100: //RootNode
+    400102: sobrancelha_dir
+    400104: sobrancelha_dir 1
+    400106: sobrancelha_esq
+    400108: sobrancelha_esq 1
+    400110: torso
+    2300000: bra__o_baixo_dir
+    2300002: bra__o_baixo_esq
+    2300004: bra__o_cima_dir
+    2300006: bra__o_cima_esq
+    2300008: cabe__a_robo
+    2300010: centro_olho_dir
+    2300012: centro_olho_esq
+    2300014: cotovelo_dir 1
+    2300016: cotovelo_esq 1
+    2300018: dedo1_dir
+    2300020: dedo__esq
+    2300022: dentes
+    2300024: detalhe_centro
+    2300026: eixo_joelho_dir
+    2300028: eixo_joelho_esq
+    2300030: eixo_mao_dir
+    2300032: eixo_mao_esq
+    2300034: eixo_ombro_dir
+    2300036: eixo_ombro_esq
+    2300038: esfera_exaustor
+    2300040: esfera_peito
+    2300042: exaustor
+    2300044: nariz
+    2300046: olho_dir 1
+    2300048: olho_esq 1
+    2300050: pe_dir
+    2300052: pe_esq
+    2300054: perna_baixo_dir
+    2300056: perna_baixo_esq
+    2300058: perna_cima_dir
+    2300060: perna_cima_esq
+    2300062: sobrancelha_dir 1
+    2300064: sobrancelha_esq 1
+    2300066: torso
+    3300000: bra__o_baixo_dir
+    3300002: bra__o_baixo_esq
+    3300004: bra__o_cima_dir
+    3300006: bra__o_cima_esq
+    3300008: cabe__a_robo
+    3300010: centro_olho_dir
+    3300012: centro_olho_esq
+    3300014: cotovelo_dir 1
+    3300016: cotovelo_esq 1
+    3300018: dedo1_dir
+    3300020: dedo__esq
+    3300022: dentes
+    3300024: detalhe_centro
+    3300026: eixo_joelho_dir
+    3300028: eixo_joelho_esq
+    3300030: eixo_mao_dir
+    3300032: eixo_mao_esq
+    3300034: eixo_ombro_dir
+    3300036: eixo_ombro_esq
+    3300038: esfera_exaustor
+    3300040: esfera_peito
+    3300042: exaustor
+    3300044: nariz
+    3300046: olho_dir 1
+    3300048: olho_esq 1
+    3300050: pe_dir
+    3300052: pe_esq
+    3300054: perna_baixo_dir
+    3300056: perna_baixo_esq
+    3300058: perna_cima_dir
+    3300060: perna_cima_esq
+    3300062: sobrancelha_dir 1
+    3300064: sobrancelha_esq 1
+    3300066: torso
+    4300000: eixo_mao_esq
+    4300002: dedo__esq
+    4300004: cotovelo_esq
+    4300006: bra__o_baixo_esq
+    4300008: eixo_ombro_esq
+    4300010: bra__o_cima_esq
+    4300012: cabe__a_robo
+    4300014: nariz
+    4300016: exaustor
+    4300018: esfera_exaustor
+    4300020: dentes
+    4300022: centro_olho_esq
+    4300024: centro_olho_dir
+    4300026: olho_esq
+    4300028: olho_dir
+    4300030: sobrancelha_dir
+    4300032: sobrancelha_esq
+    4300034: eixo_mao_dir
+    4300036: dedo1_dir
+    4300038: cotovelo_dir
+    4300040: bra__o_baixo_dir
+    4300042: eixo_ombro_dir
+    4300044: bra__o_cima_dir
+    4300046: torso
+    4300048: detalhe_centro
+    4300050: esfera_peito
+    4300052: pe_dir
+    4300054: eixo_joelho_dir
+    4300056: perna_baixo_dir
+    4300058: perna_cima_dir
+    4300060: pe_esq
+    4300062: eixo_joelho_esq
+    4300064: perna_baixo_esq
+    4300066: perna_cima_esq
+    7400000: Take 001
+    9500000: //RootNode
+    11100000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 2
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 
