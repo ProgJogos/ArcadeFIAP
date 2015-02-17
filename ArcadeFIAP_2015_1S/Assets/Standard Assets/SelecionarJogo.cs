@@ -9,11 +9,17 @@ public class SelecionarJogo : MonoBehaviour
 	public bool ativo;
 	public float transicao;
 	public GoEaseType easing;
+	public Renderer fade;
 	
 	void Start ()
 	{
-		ativo = true;
 		GerenteArcade.i.ingame = false;
+		fade.material.color = Color.black;
+		Go.to (fade, transicao * 2, new GoTweenConfig ()
+			.materialColor (Color.clear)
+		    .onComplete (f => {
+			ativo = true;
+		}));
 	}
 	
 	void Update ()
@@ -27,6 +33,8 @@ public class SelecionarJogo : MonoBehaviour
 					.onComplete (f => {
 					ArcadeFIAP.CarregarJogo (jogos [indJogo].jogoAtual);
 				}));
+				Go.to (fade, transicao * 2 * 0.8f, new GoTweenConfig ()
+					.materialColor (Color.black));
 				return;
 			}	
 			

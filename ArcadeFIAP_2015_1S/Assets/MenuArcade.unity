@@ -164,14 +164,14 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 176428538}
   m_LocalRotation: {x: 0, y: -.173647955, z: 0, w: .984807789}
-  m_LocalPosition: {x: 0, y: 0, z: -171.199997}
+  m_LocalPosition: {x: 0, y: 0, z: -152}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1880872011}
   m_RootOrder: 1
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 460, y: .600036621}
+  m_AnchorMin: {x: 1, y: .5}
+  m_AnchorMax: {x: 1, y: .5}
+  m_AnchoredPosition: {x: -50, y: 1}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &176428540
@@ -219,7 +219,7 @@ GameObject:
   - 23: {fileID: 303990432}
   - 114: {fileID: 303990436}
   m_Layer: 0
-  m_Name: Quad
+  m_Name: FIAP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -237,7 +237,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 3745b747697ca574a9bdd9f6a26c8acb, type: 2}
+  - {fileID: 2100000, guid: 63e785d855483b446bd3c46dfd4efe31, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -272,7 +272,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 303990431}
   m_LocalRotation: {x: 0, y: 0, z: .424594492, w: .905383646}
-  m_LocalPosition: {x: 0, y: 0, z: 25.1700001}
+  m_LocalPosition: {x: 0, y: 0, z: 26.7999992}
   m_LocalScale: {x: 40, y: 40, z: 1}
   m_Children: []
   m_Father: {fileID: 654085063}
@@ -319,7 +319,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 6d411a37f058a764094e92316b5f7ed2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b7e879434195d5f428376ab8e458c180, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -580,8 +580,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 6d411a37f058a764094e92316b5f7ed2, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 688e38d0e72a9dd4696e80e1ad66e7d7, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -738,6 +738,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 303990435}
+  - {fileID: 1645644317}
   m_Father: {fileID: 0}
   m_RootOrder: 1
 --- !u!114 &654085064
@@ -772,6 +773,7 @@ MonoBehaviour:
   ativo: 0
   transicao: .5
   easing: 9
+  fade: {fileID: 1645644319}
 --- !u!1 &806578834
 GameObject:
   m_ObjectHideFlags: 0
@@ -1040,7 +1042,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Duelo Fantasma
+  m_Text: Ned Meg
 --- !u!222 &1425398493
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1192,6 +1194,89 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1629183543}
+--- !u!1 &1645644316
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1645644317}
+  - 33: {fileID: 1645644321}
+  - 64: {fileID: 1645644320}
+  - 23: {fileID: 1645644319}
+  - 114: {fileID: 1645644318}
+  m_Layer: 0
+  m_Name: Fade
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1645644317
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1645644316}
+  m_LocalRotation: {x: 0, y: 0, z: .424593955, w: .905383885}
+  m_LocalPosition: {x: 0, y: 0, z: 4.17999983}
+  m_LocalScale: {x: 40, y: 40, z: 1}
+  m_Children: []
+  m_Father: {fileID: 654085063}
+  m_RootOrder: 1
+--- !u!114 &1645644318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1645644316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26b227b2fe0f5bd4b9b42eb9989160a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidade: {x: -.100000001, y: -.0500000007}
+--- !u!23 &1645644319
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1645644316}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: 3745b747697ca574a9bdd9f6a26c8acb, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!64 &1645644320
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1645644316}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 0
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!33 &1645644321
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1645644316}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1729796055
 GameObject:
   m_ObjectHideFlags: 0
@@ -1287,7 +1372,7 @@ GameObject:
   - 114: {fileID: 1768986654}
   - 114: {fileID: 1768986657}
   m_Layer: 5
-  m_Name: JogoDuelo
+  m_Name: JogoNEDMEG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1377,7 +1462,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbe43d91898b63d42bf26c311aa94a47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jogoAtual: DUELO
+  jogoAtual: NEDMEG
 --- !u!1 &1826711494
 GameObject:
   m_ObjectHideFlags: 0
@@ -1690,8 +1775,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1880872011}
   m_RootOrder: 0
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -460, y: .600000024}
+  m_AnchorMin: {x: 0, y: .5}
+  m_AnchorMax: {x: 0, y: .5}
+  m_AnchoredPosition: {x: 50, y: .600000381}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: .5, y: .5}
