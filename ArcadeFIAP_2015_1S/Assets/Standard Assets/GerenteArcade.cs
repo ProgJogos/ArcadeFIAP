@@ -13,16 +13,17 @@ public class GerenteArcade : MonoBehaviour
 {
 	public List<RostoJogo> jogos;
 	public bool ativo;
-	public float transicao;
-	public GoEaseType easing;
+	public float transicao = 0.35f;
+	public GoEaseType easing = GoEaseType.CubicInOut;
 	
 	private Renderer fade;
 	private Canvas canvasVotacao;
 	private Canvas canvasInstrucoes;
 	
 	public bool primeiroFrame;
+	public bool temMenu = false;
 	
-	public static EEtapa etapa;
+	public static EEtapa etapa = EEtapa.JOGO;
 	public static GerenteArcade i;
 	public static float timerJogo;
 	public bool votacaoPermitida = false;
@@ -34,12 +35,18 @@ public class GerenteArcade : MonoBehaviour
 			Destroy (this.gameObject);
 			return;
 		}
+		temMenu = false;
+		if (Application.loadedLevelName == "MenuArcade") {
+			temMenu = true;
+			etapa = EEtapa.MENU_JOGOS;
+		} else {
+			etapa = EEtapa.JOGO;
+		}
 		i = this;
 		DontDestroyOnLoad (this.gameObject);
 		primeiroFrame = true;
 		if (indJogo < 0)
 			indJogo = Random.Range (0, jogos.Count);
-		//StartCoroutine (SalvarLogs ());
 	}
 	
 	void Update ()
@@ -196,7 +203,19 @@ public class GerenteArcade : MonoBehaviour
 		print ("TerminarJogo");
 		etapa = (votacaoPermitida) ? EEtapa.VOTACAO : EEtapa.MENU_JOGOS;
 		primeiroFrame = true;
-		Application.LoadLevel ("MenuArcade");
+		
+		if (temMenu) {
+			Application.LoadLevel ("MenuArcade");
+		} else {
+			etapa = EEtapa.JOGO;
+			#if UNITY_EDITOR
+			Debug.Log ("Sair");
+			#else
+			Application.Quit ();
+			#endif
+		}
+		
+		
 	}
 	
 	void ReiniciarJogo ()
@@ -221,5 +240,12 @@ public class GerenteArcade : MonoBehaviour
 			yield return new WaitForSeconds (10f);
 			Metricas.SalvarLista ();
 		}
+	}
+	
+	void OnApplicationQuit ()
+	{
+		if (temMenu)
+			Metricas.SalvarLista ();
+		PlayerPrefs.Save ();
 	}
 }
