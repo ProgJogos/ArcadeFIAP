@@ -4,13 +4,9 @@
 
 Repositório com o software para o arcade dos projetos integrados dos alunos de Programação de Jogos Digitais da FIAP.
 
-## Funcionalidades
+## Instruções para uso
 
-- Interface para votos
-- Salvar votos em arquivo externo
-- Sistema de votos automático depois de partidas com mais de 1 minuto de duração
-- Controles padronizados
-- Interface para navegação entre jogos
+Faça o download do arquivo **ArcadeFIAP_Pacote.zip**, extraia para uma pasta no seu PC. Copie o script *ArcadeFIAP.cs* para dentro da pasta `Assets` de seu projeto e o arquivo *InputManager.asset* para a pasta `ProjectSettings`. O seu projeto está pronto para usar a classe `ArcadeFIAP` para controlar input. Para mais detalhes em como usar a API, leia o [arquivo de documentação da API](DocumentacaoAPI.md).
 
 ## Integração de jogos
 
