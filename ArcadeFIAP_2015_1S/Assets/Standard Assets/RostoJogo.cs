@@ -3,10 +3,13 @@ using System.Collections;
 
 public class RostoJogo : MonoBehaviour
 {
-	public string jogoAtual;
+	public string nomeJogo;
+	public InfoJogo info;
 	
 	void Start ()
 	{
+		info = new InfoJogo (nomeJogo);
+		info = InfoJogo.infos [nomeJogo];
 		// tween visual
 		var tweenConf = new GoTweenConfig ()
 			.localRotation (new Vector3 (0, 20f, 0))

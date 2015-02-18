@@ -39,10 +39,16 @@ public class GerenteArcade : MonoBehaviour
 		primeiroFrame = true;
 		if (indJogo < 0)
 			indJogo = Random.Range (0, jogos.Count);
+		//StartCoroutine (SalvarLogs ());
 	}
 	
 	void Update ()
 	{
+		//zerar metricas
+		if (Input.GetKey (KeyCode.F1) && Input.GetKey (KeyCode.F2) && !Metricas.zerado) {
+			Debug.Log ("ZERAR!");
+			Metricas.Zerar ();
+		}
 		switch (etapa) {
 		case EEtapa.JOGO:	
 			timerJogo += Time.deltaTime;
@@ -65,6 +71,8 @@ public class GerenteArcade : MonoBehaviour
 		case EEtapa.VOTACAO:
 			if (primeiroFrame) {
 				primeiroFrame = false;
+				var rostos = GameObject.FindObjectsOfType<RostoJogo> ();
+				jogos = new List<RostoJogo> (rostos);
 				votacaoPermitida = false;
 				canvasInstrucoes = GameObject.Find ("CanvasInstrucoes").GetComponent<Canvas> ();
 				canvasVotacao = GameObject.Find ("CanvasVotacao").GetComponent<Canvas> ();
@@ -80,6 +88,9 @@ public class GerenteArcade : MonoBehaviour
 			canvasInstrucoes.enabled = false;
 			if (ArcadeFIAP.ApertouBotao (1, EBotao.A)) {
 				Debug.Log ("Voto positivo");
+				InfoJogo.infos [jogos [indJogo].nomeJogo].partidas++;
+				InfoJogo.infos [jogos [indJogo].nomeJogo].votosPositivos++;
+				Metricas.SalvarLista ();
 				Go.to (canvasVotacao.transform, transicao / 3, new GoTweenConfig ()
 					.scale (0.001f)
 					.setEaseType (GoEaseType.BackIn)
@@ -94,6 +105,9 @@ public class GerenteArcade : MonoBehaviour
 			// voto negativo
 			if (ArcadeFIAP.ApertouBotao (1, EBotao.B)) {
 				Debug.Log ("Voto negativo");
+				InfoJogo.infos [jogos [indJogo].nomeJogo].partidas++;
+				InfoJogo.infos [jogos [indJogo].nomeJogo].votosNegativos++;
+				Metricas.SalvarLista ();
 				Go.to (canvasVotacao.transform, transicao / 3, new GoTweenConfig ()
 				       .scale (0.001f)
 				       .setEaseType (GoEaseType.BackIn)
@@ -189,7 +203,7 @@ public class GerenteArcade : MonoBehaviour
 	{
 		print ("ReiniciarJogo");
 		primeiroFrame = true;
-		Application.LoadLevel (jogos [indJogo].jogoAtual + "_Inicio");
+		Application.LoadLevel (jogos [indJogo].nomeJogo + "_Inicio");
 	}
 	
 	void CarregarJogo ()
@@ -198,6 +212,14 @@ public class GerenteArcade : MonoBehaviour
 		votacaoPermitida = false;
 		etapa = EEtapa.JOGO;
 		primeiroFrame = true;
-		Application.LoadLevel (jogos [indJogo].jogoAtual + "_Inicio");
+		Application.LoadLevel (jogos [indJogo].nomeJogo + "_Inicio");
+	}
+	
+	IEnumerator SalvarLogs ()
+	{
+		while (true) {
+			yield return new WaitForSeconds (10f);
+			Metricas.SalvarLista ();
+		}
 	}
 }

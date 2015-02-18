@@ -4,11 +4,12 @@ Repositório com o software para o arcade dos projetos integrados dos alunos de 
 
 ## Funcionalidades
 
-- Interface para votos
-- Sistema de votos automático depois de partidas com mais de 1 minuto de duração
+- Salvar votos em arquivo externo
 
 #### Pronto
 
+- Interface para votos
+- Sistema de votos automático depois de partidas com mais de 1 minuto de duração
 - Controles padronizados
 - Interface para navegação entre jogos
 
