@@ -18,8 +18,6 @@ public enum EBotao
 	
 public static class ArcadeFIAP
 {
-	public static List<string> jogos;
-
 	#region Controles
 	public static bool ApertouBotao (int jogador, EBotao botao)
 	{
@@ -57,13 +55,6 @@ public static class ArcadeFIAP
 		throw new System.InvalidOperationException ("Indice de jogador invalido. Mude para jogador 1 ou 2.");
 	}
 	#endregion
-	
-	public static void Inicializar ()
-	{
-		// TODO carregar nomes de arquivo?
-		// jogos = new List<string> ();
-
-	}
 }
 
 
