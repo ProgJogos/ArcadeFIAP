@@ -16,7 +16,7 @@ Repositório com o software para o arcade dos projetos integrados dos alunos de 
 
 Lista dos jogos que já estão integrados no Arcade.
 
-###  1S_2014
+###  1o Semestre 2014
 
 - Ned Meg
 - T.R.A.S.H.
