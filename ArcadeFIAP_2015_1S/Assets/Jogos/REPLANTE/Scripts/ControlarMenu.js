@@ -34,8 +34,8 @@ function Update () {
 			ani_btn_Estatistica.SetBool("btn_Rec_Sel", false);
 			ani_btn_Creditos.SetBool("btn_Cred_Sel", false);
 			
-			if (ArcadeFIAP.SoltouBotao(1, EBotao.A)){
-				Application.LoadLevel("REPLANTE_Historia");
+			if (Input.GetKeyUp(KeyCode.J)){
+				Application.LoadLevel("Historia");
 				CalcularPontuacao.pontosParciais = 0;
 				CalcularPontuacao.qtdDesmatamentoEvitadoParcial = 0;
 				CalcularPontuacao.qtdMudaPlantadaParcial = 0;
@@ -53,8 +53,8 @@ function Update () {
 			ani_btn_Creditos.SetBool("btn_Cred_Sel", false);
 			
 			//checa se o botao de acao for solto
-			if (ArcadeFIAP.SoltouBotao(1, EBotao.A)){
-				Application.LoadLevel("REPLANTE_Estatisticas");
+			if (Input.GetKeyUp(KeyCode.J)){
+				Application.LoadLevel("Estatisticas");
 			}
 			break;
 			
@@ -69,14 +69,14 @@ function Update () {
 			ani_btn_Creditos.SetBool("btn_Cred_Sel", true);
 		
 			//checa se o botao de acao for solto
-			if (ArcadeFIAP.SoltouBotao(1, EBotao.A)){
-				Application.LoadLevel("REPLANTE_Creditos");
+			if (Input.GetKeyUp(KeyCode.J)){
+				Application.LoadLevel("Creditos");
 			}
 			break;
 	}
 	
 	//MUDAR ENTRE BOTOES PELO INPUT
-	var direcao = ArcadeFIAP.Eixo(1, EEixo.VERTICAL);
+	var direcao = Input.GetAxis("Vertical");
 	//quero diminuir o btnSelecionado
 	if (direcao > 0 && podeMudar){
 		btnSelecionado--;

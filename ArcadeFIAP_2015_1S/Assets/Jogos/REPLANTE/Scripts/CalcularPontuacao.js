@@ -7,9 +7,9 @@ public static var qtdMudaPlantadaParcial : float;
 public static var qtdMudaPlantadaTotal : float;
 
 function Update (){
-	PlayerPrefs.SetFloat("REPLANTE_pontuacaoParcial", pontosParciais);
-	PlayerPrefs.SetFloat("REPLANTE_desmatamentoEvitadoParcial", qtdDesmatamentoEvitadoParcial);
-	PlayerPrefs.SetFloat("REPLANTE_mudaPlantadaParcial", qtdMudaPlantadaParcial);
-	PlayerPrefs.SetFloat("REPLANTE_desmatamentoEvitadoTotal", qtdDesmatamentoEvitadoTotal);
-	PlayerPrefs.SetFloat("REPLANTE_mudaPlantadaTotal", qtdMudaPlantadaTotal);
+	PlayerPrefs.SetFloat("pontuacaoParcial", pontosParciais);
+	PlayerPrefs.SetFloat("desmatamentoEvitadoParcial", qtdDesmatamentoEvitadoParcial);
+	PlayerPrefs.SetFloat("mudaPlantadaParcial", qtdMudaPlantadaParcial);
+	PlayerPrefs.SetFloat("desmatamentoEvitadoTotal", qtdDesmatamentoEvitadoTotal);
+	PlayerPrefs.SetFloat("mudaPlantadaTotal", qtdMudaPlantadaTotal);
 }

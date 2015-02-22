@@ -1,7 +1,7 @@
 ﻿#pragma strict
 
 function Update () {
-	if (ArcadeFIAP.SoltouBotao(1, EBotao.A) || ArcadeFIAP.SoltouBotao(1, EBotao.B)){
-		Application.LoadLevel("REPLANTE_Menu");
+	if (Input.GetKeyDown(KeyCode.K) || Input.GetKeyDown(KeyCode.J)){
+		Application.LoadLevel("Menu");
 	}
 }
