@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 public enum EEtapa
 {
@@ -79,7 +80,7 @@ public class GerenteArcade : MonoBehaviour
 			if (primeiroFrame) {
 				primeiroFrame = false;
 				var rostos = GameObject.FindObjectsOfType<RostoJogo> ();
-				jogos = new List<RostoJogo> (rostos);
+				jogos = new List<RostoJogo> (rostos.OrderBy (r => r.ordem));
 				votacaoPermitida = false;
 				canvasInstrucoes = GameObject.Find ("CanvasInstrucoes").GetComponent<Canvas> ();
 				canvasVotacao = GameObject.Find ("CanvasVotacao").GetComponent<Canvas> ();
@@ -133,8 +134,7 @@ public class GerenteArcade : MonoBehaviour
 				primeiroFrame = false;
 				
 				var rostos = GameObject.FindObjectsOfType<RostoJogo> ();
-				jogos = new List<RostoJogo> (rostos);
-				
+				jogos = new List<RostoJogo> (rostos.OrderBy (r => r.ordem));
 				canvasInstrucoes = GameObject.Find ("CanvasInstrucoes").GetComponent<Canvas> ();
 				canvasVotacao = GameObject.Find ("CanvasVotacao").GetComponent<Canvas> ();
 				fade = GameObject.Find ("Fade").renderer;

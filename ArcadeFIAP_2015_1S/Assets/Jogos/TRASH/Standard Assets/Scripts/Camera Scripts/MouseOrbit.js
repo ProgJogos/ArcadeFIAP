@@ -23,8 +23,8 @@ function Start () {
 
 function LateUpdate () {
     if (target) {
-        x += Input.GetAxis("Horizontal") * xSpeed * 0.02;
-        y -= Input.GetAxis("Vertical") * ySpeed * 0.02;
+        x += ArcadeFIAP.Eixo(1, EEixo.HORIZONTAL) * xSpeed * 0.02;
+        y -= ArcadeFIAP.Eixo(1, EEixo.VERTICAL) * ySpeed * 0.02;
  		
  		x = ClampAngle(x, xMinLimit, xMaxLimit);
  		y = ClampAngle(y, yMinLimit, yMaxLimit);

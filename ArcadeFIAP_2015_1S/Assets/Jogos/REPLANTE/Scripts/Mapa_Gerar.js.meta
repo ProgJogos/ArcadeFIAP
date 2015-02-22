@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: 9cac057cc87b5e843b5bceaed91e9266
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - prefabMapa1: {fileID: 400022, guid: 012f9d05f15465e4b9fba0941f0e54f2, type: 2}
+  - prefabMapa2: {fileID: 400022, guid: 8d137e0e0cac0d142885722a78301961, type: 2}
+  - prefabMapa3: {fileID: 400022, guid: d3b038c4323499442bbf2ba868ed0b22, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
