@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 9aabde1e146e92b4b8e84185e115a177
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - prefabTiro: {fileID: 400002, guid: 40c2f980f3450e34b97e79bf07bb3859, type: 2}
+  - alvo: {fileID: 400006, guid: 4e111ae2fc3fb40418d9258f30c5cede, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
