@@ -16,10 +16,10 @@ Lista dos jogos que já estão integrados no Arcade.
 
 ##### Prontos
 
-- Ned Meg
-- T.R.A.S.H.
-- Replante
-- Unti
+- **Ned Meg.** Ok.
+- **T.R.A.S.H.** Ok.
+- **Replante!** Ok.
+- **O mundo destruído de Unti.** O Gosmito fica invisível quando leva tiro.
 
 ##### Com problemas
 
