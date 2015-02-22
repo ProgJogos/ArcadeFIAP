@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: c0afafff1fff4e14daec205dff7dba35
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - smoke: {fileID: 400000, guid: 92e6d9926a8c43d49a79f0d3d603277a, type: 2}
+  - jatodeagua: {fileID: 400000, guid: 91eb2f013f603834c97f9bad763de926, type: 2}
+  - a: {fileID: 400000, guid: 91eb2f013f603834c97f9bad763de926, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 

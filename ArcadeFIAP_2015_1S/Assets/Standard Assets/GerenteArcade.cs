@@ -198,7 +198,7 @@ public class GerenteArcade : MonoBehaviour
 		
 	}
 	
-	void TerminarJogo ()
+	public void TerminarJogo ()
 	{
 		print ("TerminarJogo");
 		etapa = (votacaoPermitida) ? EEtapa.VOTACAO : EEtapa.MENU_JOGOS;

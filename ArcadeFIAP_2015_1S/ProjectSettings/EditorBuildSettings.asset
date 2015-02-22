@@ -18,6 +18,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Jogos/NEDMEG/Scene/NEDMEG_wow.unity
   - enabled: 1
+    path: Assets/Jogos/SALVANDO/Scenes/SALVANDO_gameover.unity
+  - enabled: 1
+    path: Assets/Jogos/SALVANDO/Scenes/SALVANDO_level1.unity
+  - enabled: 1
+    path: Assets/Jogos/SALVANDO/Scenes/SALVANDO_Inicio.unity
+  - enabled: 1
+    path: Assets/Jogos/SALVANDO/Menu/SALVANDO_credits.unity
+  - enabled: 1
     path: Assets/Jogos/UNTI/Cenas/UNTI_Creditos.unity
   - enabled: 1
     path: Assets/Jogos/UNTI/Cenas/UNTI_Inicio.unity

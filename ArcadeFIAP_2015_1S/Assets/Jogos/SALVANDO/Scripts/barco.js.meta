@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: fc6a16531314d8642a07a25a9415b2b4
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - agua: {fileID: 400000, guid: 4e4dfac55f49ad446bf7f4b2ec4fd1fa, type: 2}
+  - p2prefballoon: {fileID: 400000, guid: de1c582cffe2c194ba71fc46eaec6e1f, type: 2}
+  - ondas: {fileID: 400000, guid: 2050bff444c750f4c8b943d404d07705, type: 2}
+  - player1: {fileID: 400000, guid: 78c3ffe40bd34ca44afc6ee80635baf2, type: 2}
+  - player2: {fileID: 400000, guid: 56ca6f25a7a7c4248a9064786f872825, type: 2}
+  - explosao: {fileID: 400000, guid: 8f54668e663dfa84185a10492f65caff, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
