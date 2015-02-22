@@ -14,8 +14,16 @@ Lista dos jogos que já estão integrados no Arcade.
 
 ###  1o Semestre 2014
 
+##### Prontos
+
 - Ned Meg
 - T.R.A.S.H.
+- Replante
+- Unti
+
+##### Com problemas
+
+- **Salvando os animais.** O jogo não roda de forma adequada. A fase jogável não está funcionando de forma coerente, mesmo depois da alteração cuidadosa dos inputs.
 
 ---
 

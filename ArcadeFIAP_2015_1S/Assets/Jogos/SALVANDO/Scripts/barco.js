@@ -85,11 +85,11 @@ function moverBarco(){
 	//Direcional
 	flutuarBarco();
 	//ATIRAR AGUA (P1)
-	if (Input.GetKey(b.barco_p1b1)){
+	if (ArcadeFIAP.BotaoApertado(1, EBotao.A)){
 		atirarAgua("player1");
 	}
 	//IMA (P1)
-	if (Input.GetKeyDown(b.barco_p1b2)){
+	if (ArcadeFIAP.ApertouBotao(1, EBotao.B)){
 		if(!imaligado) imaligado = true;
 		else imaligado = false;
 	}
@@ -101,14 +101,14 @@ function moverBarco(){
 	}
 	if(g.p2nobarco==true){ //Se o p2 tiver no barco
 		//ATIRAR (P2)
-		if (Input.GetKeyDown(b.barco_p2b2) && g.p2balloons>0){
+		if (ArcadeFIAP.ApertouBotao(2, EBotao.B) && g.p2balloons>0){
 			atirarAgua("player2");
 		}
 		else{
 			anima.SetFloat("balao",0);
 		}
 		//PULAR DO BARCO (P2)
-		if(Input.GetKeyDown(b.barco_p2b1)){
+		if(ArcadeFIAP.ApertouBotao(2, EBotao.A)){
 			g.p2nobarco=false;
 			player2.rigidbody.velocity*=0;
 		}

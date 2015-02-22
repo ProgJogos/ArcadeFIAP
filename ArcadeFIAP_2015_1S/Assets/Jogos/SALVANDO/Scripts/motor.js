@@ -15,7 +15,7 @@ public var colisor:String;
 public static var forcatiro:float=0;//Forca atual do tiro nao modificar
 public static var vidaatual:float=100;//vida atual
 public static var vidamax:float=100;//vida maxima
-var player:String;
+var player:int;
 public var mira:GameObject;
 public var miras:GameObject[];
 public var thisplayer:GameObject;
@@ -26,9 +26,10 @@ public var timer:float;
 
 function Start(){
 	//o player eh a variavel com o nome do player atual
-	player=this.transform.name;
+	
+	player= (this.transform.name == "Player1")? 1 : 2;
 	rigidbody.drag=g.drag;
-	thisplayer=GameObject.Find(player);
+	thisplayer=this.gameObject;
 	rigidbody.velocity=Vector3.zero;
 }
 function FixedUpdate(){
@@ -102,7 +103,7 @@ function moverPlayer(){
 	anima.SetFloat("pulando",rigidbody.velocity.y);
 	//B1
 	//ENTRAR NO BARCO
-	if(Input.GetKeyDown(b.p2b1)){
+	if(ArcadeFIAP.ApertouBotao(2, EBotao.A)){
 		if(colisor=="barco"&& g.p2nobarco==false){
 			g.p2nobarco = true;
 		}
@@ -112,11 +113,11 @@ function moverPlayer(){
 	}
 	//B2
 	//QUANDO SOLTAR O BOTAO E ESTIVER NO CHAO A PEDRA DO ESTILINGUE E LANCADA
-	if(Input.GetKeyUp(b.p2b2)&&verificarPulo()){
+	if(ArcadeFIAP.SoltouBotao(2, EBotao.B)&&verificarPulo()){
 		//SE EXISTIR ALGUMA MIRA DESTRUIRA
 		if(miras.Length>0)Destroy(mira.gameObject);
 		//SE EXISTIR UM VALOR DE ANGULO NO AXIS IRA INSTANCIAR E ATIRAR UMA PEDRA NA DIRECAO CONTRARIA AO AXIS
-		if((Mathf.Abs(Input.GetAxis("vertical"+player))>0) || (Mathf.Abs(Input.GetAxis("horizontal"+player))>0)){
+		if((Mathf.Abs(ArcadeFIAP.Eixo(player, EEixo.VERTICAL))>0) || (Mathf.Abs(ArcadeFIAP.Eixo(player, EEixo.HORIZONTAL))>0)){
 			var municao = Instantiate(prefmuni,transform.position + Vector3(transform.localScale.x*0.5,transform.localScale.y*0.3,0),transform.rotation);
 			anima.SetFloat("forcatiro",-forcatiro);
 			municao.rigidbody.AddForce(-direcao*forcatiro,ForceMode.VelocityChange);
@@ -130,43 +131,43 @@ function moverPlayer(){
 	//VERIFICAR ANIMAÇAO
 	anima.SetFloat("forcatiro",forcatiro);
 	//B2 nao apertado
-	if(!Input.GetKey(b.p2b2) && !atirou){ //SE ESTA MIRANDO NAO PODER PULAR NEM ANDAR
+	if(!ArcadeFIAP.BotaoApertado(2, EBotao.B) && !atirou){ //SE ESTA MIRANDO NAO PODER PULAR NEM ANDAR
 		//animacao de correr e flip
-		anima.SetFloat("correndo",Mathf.Abs(Input.GetAxis("horizontal"+player)));
-		if(Input.GetAxis("horizontal"+player)>0){
+		anima.SetFloat("correndo",Mathf.Abs(ArcadeFIAP.Eixo(player, EEixo.HORIZONTAL)));
+		if(ArcadeFIAP.Eixo(player, EEixo.HORIZONTAL)>0){
 			transform.localScale.x = Mathf.Abs(transform.localScale.x);
 		}
-		else if(Mathf.Sign(Input.GetAxis("horizontal"+player))<0){
+		else if(Mathf.Sign(ArcadeFIAP.Eixo(player, EEixo.HORIZONTAL))<0){
 			transform.localScale.x = -Mathf.Abs(transform.localScale.x);
 		}
 		//SE ESTA NO CHAO E PODE PULAR
 		//CIMA PULO
-		if(Input.GetAxis("vertical"+player)>0 && verificarPulo() && Input.GetButtonDown("Jump")){
+		if(ArcadeFIAP.Eixo(player, EEixo.VERTICAL)>0 && verificarPulo() && ArcadeFIAP.ApertouBotao(player, EBotao.A)){
 			thisplayer.rigidbody.velocity.y= Vector3.Lerp(rigidbody.velocity,transform.up *g.velocidadePulo, g.pulotime).y;
 		}
 		//MOVIMENTACAO HORIZONTAL
-		thisplayer.rigidbody.velocity.x = Vector3.Lerp(rigidbody.velocity,transform.right * Input.GetAxis("horizontal"+player) * g.vmax, g.horizontaltime).x;
+		thisplayer.rigidbody.velocity.x = Vector3.Lerp(rigidbody.velocity,transform.right * ArcadeFIAP.Eixo(player, EEixo.HORIZONTAL) * g.vmax, g.horizontaltime).x;
 		anima.SetBool("atirando",false);
 	}
 	else{ // FICA PARADO
-		thisplayer.rigidbody.velocity.x = Vector3.Lerp(rigidbody.velocity,transform.right * Input.GetAxis("horizontal"+player) * 0, g.horizontaltime).x;
+		thisplayer.rigidbody.velocity.x = Vector3.Lerp(rigidbody.velocity,transform.right * ArcadeFIAP.Eixo(player, EEixo.HORIZONTAL) * 0, g.horizontaltime).x;
 		anima.SetFloat("correndo",0);
 		anima.SetBool("atirando",true);
-		if(Input.GetAxis("horizontal"+player)>0){
+		if(ArcadeFIAP.Eixo(player, EEixo.HORIZONTAL)>0){
 			transform.localScale.x = -Mathf.Abs(transform.localScale.x);
 		}
-		else if(Mathf.Sign(Input.GetAxis("horizontal"+player))<0){
+		else if(Mathf.Sign(ArcadeFIAP.Eixo(player, EEixo.HORIZONTAL))<0){
 			transform.localScale.x = Mathf.Abs(transform.localScale.x);
 		}
 	}	
 	//ESTILINGUE
-	if(Input.GetKeyDown(b.p2b2)&&verificarPulo()){ //SE APERTAR E ESTIVER NO CHAO CRIA MIRA E PARENTEIA
+	if(ArcadeFIAP.ApertouBotao(2, EBotao.B)&&verificarPulo()){ //SE APERTAR E ESTIVER NO CHAO CRIA MIRA E PARENTEIA
 		var tmira = Instantiate (prefmira,transform.position + Vector3(transform.localScale.x*0.23,transform.localScale.y*0.22,0),Quaternion.identity);
 		tmira.transform.parent = this.transform;
 	}
 	//SE ESTIVER NO CHAO E ESTIVER SEGURANDO O BOTAO DE FORÇA DO ESTILINGUE
-	if(Input.GetKey(b.p2b2)&&verificarPulo()){
-	 	direcao = Vector3(Input.GetAxis("horizontal"+player),Input.GetAxis("vertical"+player),0);//DIRECAO E O VALOR DO AXIS
+	if(ArcadeFIAP.BotaoApertado(2, EBotao.B)&&verificarPulo()){
+	 	direcao = Vector3(ArcadeFIAP.Eixo(player, EEixo.HORIZONTAL),ArcadeFIAP.Eixo(player, EEixo.VERTICAL),0);//DIRECAO E O VALOR DO AXIS
 		if(float.IsNaN(direcao.x)&&float.IsNaN(direcao.y)){//EVITA ERROS COM NAN
 			direcao=direcao*0;
 		}
@@ -176,11 +177,11 @@ function moverPlayer(){
 		else{
 			if(linhas.Length>0)linha.gameObject.transform.renderer.enabled=true;
 		}
-		angulo = Mathf.Atan(Input.GetAxis("vertical"+player)/Input.GetAxis("horizontal"+player))*57.3;//VALOR DO ANGULO DA MIRA
+		angulo = Mathf.Atan(ArcadeFIAP.Eixo(player, EEixo.VERTICAL)/ArcadeFIAP.Eixo(player, EEixo.HORIZONTAL))*57.3;//VALOR DO ANGULO DA MIRA
 		if(float.IsNaN(angulo)){ //NAO DEIXA O ANGULO SER NAN
 			angulo=0;
 		}
-		if(Input.GetAxis("horizontal"+player)<0){ //FAZ ELA GIRAR 360 GRAUS
+		if(ArcadeFIAP.Eixo(player, EEixo.HORIZONTAL)<0){ //FAZ ELA GIRAR 360 GRAUS
 				angulo=180 + angulo;
 		}
 		//mira.transform.position = transform.position - direcao * 1 ;
@@ -188,10 +189,10 @@ function moverPlayer(){
 			//GIRA A MIRA
 			mira.transform.rotation = Quaternion.Euler(0,0,angulo+180);
 		}
-		if(forcatiro<g.forcamaxima && ((Mathf.Abs(Input.GetAxis("vertical"+player))>0) || (Mathf.Abs(Input.GetAxis("horizontal"+player))>0))){
+		if(forcatiro<g.forcamaxima && ((Mathf.Abs(ArcadeFIAP.Eixo(player, EEixo.VERTICAL))>0) || (Mathf.Abs(ArcadeFIAP.Eixo(player, EEixo.HORIZONTAL))>0))){
 			forcatiro+=0.1; //FORCA TIRO AUMENTA GRADUALMENTE CONFORME SEGURA O MOTAO DE TIRO E POSSUI UMA DIRECAO
 		}
-		else if ((Mathf.Abs(Input.GetAxis("vertical"+player))==0) && (Mathf.Abs(Input.GetAxis("horizontal"+player))==0)){
+		else if ((Mathf.Abs(ArcadeFIAP.Eixo(player, EEixo.VERTICAL))==0) && (Mathf.Abs(ArcadeFIAP.Eixo(player, EEixo.HORIZONTAL))==0)){
 			if(forcatiro!=0)forcatiro=0;//FORCA DO TIRO ZERA SE NAO TIVER DIRECAO
 		}
 		//ANIMA ANGULO

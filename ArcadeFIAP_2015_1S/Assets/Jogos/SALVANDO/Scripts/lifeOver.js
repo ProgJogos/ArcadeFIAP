@@ -52,7 +52,7 @@ function Update () {
 		if(motor.vidaatual<=0 || b.vidaatual <=0){
 			timer3+=Time.deltaTime;
 			if(timer3>3){
-				Application.LoadLevel("gameover");
+				Application.LoadLevel("SALVANDO_gameover");
 				timer3 = 0;
 			}
 		}
