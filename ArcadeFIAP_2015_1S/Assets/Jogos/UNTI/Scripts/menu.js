@@ -26,19 +26,19 @@ function Update () {
 			botaoAtual = btnNovoJogo;
 			
 			// checa se o botao de acao for solto
-			if (Input.GetKeyUp(KeyCode.V) ||
-				Input.GetKeyUp(KeyCode.Return)){
+			if (ArcadeFIAP.ApertouBotao(1, EBotao.A) ||
+				ArcadeFIAP.ApertouBotao(1, EBotao.B)){
 				//print ("comecar novo jogo");
-				Application.LoadLevel(1);
+				Application.LoadLevel("UNTI_Jogo");
 			}
 			break;
 		case 1 : 
 			botaoAtual = btnPlacar;
 			
 			// checa se o botao de acao for solto
-			if (Input.GetKeyUp(KeyCode.V) ||
-				Input.GetKeyUp(KeyCode.Return)){
-				Application.LoadLevel(2);
+			if (ArcadeFIAP.ApertouBotao(1, EBotao.A) ||
+				ArcadeFIAP.ApertouBotao(1, EBotao.B)){
+				Application.LoadLevel("UNTI_Creditos");
 			}
 			break;
 	
@@ -48,7 +48,7 @@ function Update () {
 	transform.position =  new Vector3.Lerp(transform.position, botaoAtual.position - margem, 0.1f);
 	
 	// mudar entre botoes pelo input
-	var direcao = Input.GetAxis("Vertical");
+	var direcao = ArcadeFIAP.Eixo(1, EEixo.VERTICAL);
 	// quero diminuir o btnSelecionado
 	if (direcao > 0 && podeMudar) {
 		btnSelecionado--;

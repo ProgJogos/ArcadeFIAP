@@ -16,7 +16,7 @@ function Start () {
 }
 
 function Update () {
-	if (Input.GetButtonDown("Jump") && estaNoChao) {
+	if (ArcadeFIAP.ApertouBotao(1, EBotao.B) && estaNoChao) {
 		estaNoChao = false;
 		timer = 0;
 		animator.SetFloat ("PulandoUnti", 1);
@@ -36,18 +36,18 @@ function FixedUpdate () {
 		aceleracaoReal *= modificadorAr;
 	}
 	
-	if (Input.GetButton("Jump") && estaNoChao && timer < tempoSubida) {
+	if (ArcadeFIAP.BotaoApertado(1, EBotao.B) && estaNoChao && timer < tempoSubida) {
 		rigidbody2D.velocity.y = velocidadePulo;
 		timer += Time.fixedDeltaTime;
 	}
 	
 
 	if (Mathf.Abs (rigidbody2D.velocity.x) < velocidadeMaximaX ) {
-		rigidbody2D.velocity.x += Input.GetAxis ("Horizontal") * aceleracaoReal * Time.fixedDeltaTime;
+		rigidbody2D.velocity.x += ArcadeFIAP.Eixo(1, EEixo.HORIZONTAL) * aceleracaoReal * Time.fixedDeltaTime;
 	}
 	
-	if (Input.GetAxis ("Horizontal") != 0) {
-		transform.localScale.x = Mathf.Sign (Input.GetAxis ("Horizontal"));
+	if (ArcadeFIAP.Eixo(1, EEixo.HORIZONTAL) != 0) {
+		transform.localScale.x = Mathf.Sign (ArcadeFIAP.Eixo(1, EEixo.HORIZONTAL));
 	}
 	
 	

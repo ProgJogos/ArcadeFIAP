@@ -7,7 +7,7 @@ function Start () {
 }
 
 function Update () {
-	if(Input.GetKeyDown(KeyCode.Space)){
+	if(ArcadeFIAP.ApertouBotao(1, EBotao.A)){
 		audio.PlayOneShot (sons [Random.Range (0, sons.Length)]);
 		
 		var prefabTiro : Transform;

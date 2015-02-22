@@ -15,7 +15,7 @@ transform.parent.gameObject.GetComponent(Personagem).limiteMinY += 1.20;
 
 }
 function Update () {
-	if(Input.GetKey(KeyCode.V) && contador < tempoespera ){
+	if(ArcadeFIAP.BotaoApertado(1, EBotao.A) && contador < tempoespera ){
 	GetComponent.<Animator>().SetTrigger("atirou");
 		audio.PlayOneShot (somtiroajudante);
 		

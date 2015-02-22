@@ -5,11 +5,7 @@ function Start () {
 }
 
 function Update () {
-if(Input.GetKey(KeyCode.V)) {
-
-			 
-				
-			
-				Application.LoadLevel(0);}
+if(ArcadeFIAP.ApertouBotao(1, EBotao.A)) {
+	Application.LoadLevel("UNTI_Inicio");}
 
 }

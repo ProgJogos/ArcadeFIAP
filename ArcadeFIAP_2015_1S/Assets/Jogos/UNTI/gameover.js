@@ -8,6 +8,6 @@ function Update () {
 
 }
 function Gameover () {
-Application.LoadLevel(0);
+Application.LoadLevel("UNTI_Inicio");
 
 }

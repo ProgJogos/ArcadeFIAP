@@ -26,13 +26,13 @@ function Update () {
 	
 	
 		
-	if(Input.GetKey(KeyCode.UpArrow) && transform.position.y < limiteMaxY)
+	if(ArcadeFIAP.Eixo(1, EEixo.VERTICAL) > 0 && transform.position.y < limiteMaxY)
 	{
 		transform.Translate(0,velocidade * Time.fixedDeltaTime,0);
 		
 	}
 	
-	if(Input.GetKey(KeyCode.DownArrow) && transform.position.y > limiteMinY)
+	if(ArcadeFIAP.Eixo(1, EEixo.VERTICAL) < 0 && transform.position.y > limiteMinY)
 	{
 		transform.Translate(0,-velocidade * Time.fixedDeltaTime,0);
 		

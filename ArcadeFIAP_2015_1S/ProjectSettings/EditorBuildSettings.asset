@@ -18,6 +18,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Jogos/NEDMEG/Scene/NEDMEG_wow.unity
   - enabled: 1
+    path: Assets/Jogos/UNTI/Cenas/UNTI_Creditos.unity
+  - enabled: 1
+    path: Assets/Jogos/UNTI/Cenas/UNTI_Inicio.unity
+  - enabled: 1
+    path: Assets/Jogos/UNTI/Cenas/UNTI_Jogo.unity
+  - enabled: 1
     path: Assets/Jogos/REPLANTE/REPLANTE_Creditos.unity
   - enabled: 1
     path: Assets/Jogos/REPLANTE/REPLANTE_Estatisticas.unity
