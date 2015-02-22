@@ -1,5 +1,5 @@
 ﻿#pragma strict
 
 function Update () {
-	guiText.text = PlayerPrefs.GetFloat("desmatamentoEvitadoTotal").ToString("00");
+	guiText.text = PlayerPrefs.GetFloat("REPLANTE_desmatamentoEvitadoTotal").ToString("00");
 }

@@ -16,7 +16,7 @@ function Update () {
 	}
 	else if(curLife <= 0){
 		animador.SetFloat("Vida", 0);
-		Application.LoadLevel("GameOver");
+		Application.LoadLevel("REPLANTE_GameOver");
 		CalcularPontuacao.qtdMudaPlantadaTotal += CalcularPontuacao.qtdMudaPlantadaParcial;
 		CalcularPontuacao.qtdDesmatamentoEvitadoTotal += CalcularPontuacao.qtdDesmatamentoEvitadoParcial;
 	}

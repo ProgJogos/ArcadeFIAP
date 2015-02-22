@@ -1,5 +1,5 @@
 ﻿#pragma strict
 
 function Update () {
-	guiText.text = PlayerPrefs.GetFloat("pontuacaoParcial").ToString("00000");
+	guiText.text = PlayerPrefs.GetFloat("REPLANTE_pontuacaoParcial").ToString("00000");
 }

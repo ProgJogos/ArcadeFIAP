@@ -25,8 +25,8 @@ function Start () {
 
 function Update () {
 	
-	direcaoX = Input.GetAxis("Horizontal");
-	direcaoY = Input.GetAxis("Vertical");
+	direcaoX = ArcadeFIAP.Eixo(1, EEixo.HORIZONTAL);
+	direcaoY = ArcadeFIAP.Eixo(1, EEixo.VERTICAL);
 	
 	if(transform.position.x < -49.3){
 		transform.position.x = -49.295;
