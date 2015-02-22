@@ -14,8 +14,17 @@ Lista dos jogos que já estão integrados no Arcade.
 
 ###  1o Semestre 2014
 
-- Ned Meg
-- T.R.A.S.H.
+##### Prontos
+
+- **Ned Meg.** Ok.
+- **T.R.A.S.H.** Ok.
+- **Replante!** Ok.
+- **O mundo destruído de Unti.** O Gosmito fica invisível quando leva tiro.
+- **Justice Heroes**. A primeira fase não tem final. Está sem créditos.
+
+##### Com problemas
+
+- **Salvando os animais.** O jogo não roda de forma adequada. A fase jogável não está funcionando de forma coerente, mesmo depois da alteração cuidadosa dos inputs.
 
 ---
 

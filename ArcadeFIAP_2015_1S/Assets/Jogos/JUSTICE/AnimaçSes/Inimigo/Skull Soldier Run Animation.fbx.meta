@@ -1,0 +1,365 @@
+fileFormatVersion: 2
+guid: 446ccce40f580db469f321b89e7a59d7
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Chest_jnt
+    100002: Head_jnt
+    100004: Head_Top_End
+    100006: Hips_jnt
+    100008: Left_Clavicle_jnt
+    100010: Left_Elblow_jnt
+    100012: Left_Foot_jnt
+    100014: Left_Hand_Index_01_jnt
+    100016: Left_Hand_Index_02_jnt
+    100018: Left_Hand_Index_03_jnt
+    100020: Left_Hand_Index_End
+    100022: Left_Hand_jnt
+    100024: Left_Hand_Middle_01_jnt
+    100026: Left_Hand_Middle_02_jnt
+    100028: Left_Hand_Middle_03_jnt
+    100030: Left_Hand_Middle_End
+    100032: Left_Hand_Pinky_01_jnt
+    100034: Left_Hand_Pinky_02_jnt
+    100036: Left_Hand_Pinky_03_jnt
+    100038: Left_Hand_Pinky_End
+    100040: Left_Hand_Ring_01_jnt
+    100042: Left_Hand_Ring_02_jnt
+    100044: Left_Hand_Ring_03_jnt
+    100046: Left_Hand_Ring_End
+    100048: Left_Hand_Thumb_01_jnt
+    100050: Left_Hand_Thumb_02_jnt
+    100052: Left_Hand_Thumb_03_jnt
+    100054: Left_Hand_Thumb_End
+    100056: Left_Knee_jnt
+    100058: Left_Leg_jnt
+    100060: Left_Shoulder_jnt
+    100062: Left_Toe_End
+    100064: Left_Toe_jnt
+    100066: Neck_jnt
+    100068: Right_Clavicle_jnt
+    100070: Right_Elblow_jnt
+    100072: Right_Foot_jnt
+    100074: Right_Hand_Index_01_jnt
+    100076: Right_Hand_Index_02_jnt
+    100078: Right_Hand_Index_03_jnt
+    100080: Right_Hand_Index_End
+    100082: Right_Hand_jnt
+    100084: Right_Hand_Middle_01_jnt
+    100086: Right_Hand_Middle_02_jnt
+    100088: Right_Hand_Middle_03_jnt
+    100090: Right_Hand_Middle_End
+    100092: Right_Hand_Pinky_01_jnt
+    100094: Right_Hand_Pinky_02_jnt
+    100096: Right_Hand_Pinky_03_jnt
+    100098: Right_Hand_Pinky_End
+    100100: Right_Hand_Ring_01_jnt
+    100102: Right_Hand_Ring_02_jnt
+    100104: Right_Hand_Ring_03_jnt
+    100106: Right_Hand_Ring_End
+    100108: Right_Hand_Thumb_01_jnt
+    100110: Right_Hand_Thumb_02_jnt
+    100112: Right_Hand_Thumb_03_jnt
+    100114: Right_Hand_Thumb_End
+    100116: Right_Knee_jnt
+    100118: Right_Leg_jnt
+    100120: Right_Shoulder_jnt
+    100122: Right_Toe_End
+    100124: Right_Toe_jnt
+    100126: //RootNode
+    100128: Skull_Soldier_mesh
+    100130: Spine_01_jnt
+    100132: Spine_02_jnt
+    400000: Chest_jnt
+    400002: Head_jnt
+    400004: Head_Top_End
+    400006: Hips_jnt
+    400008: Left_Clavicle_jnt
+    400010: Left_Elblow_jnt
+    400012: Left_Foot_jnt
+    400014: Left_Hand_Index_01_jnt
+    400016: Left_Hand_Index_02_jnt
+    400018: Left_Hand_Index_03_jnt
+    400020: Left_Hand_Index_End
+    400022: Left_Hand_jnt
+    400024: Left_Hand_Middle_01_jnt
+    400026: Left_Hand_Middle_02_jnt
+    400028: Left_Hand_Middle_03_jnt
+    400030: Left_Hand_Middle_End
+    400032: Left_Hand_Pinky_01_jnt
+    400034: Left_Hand_Pinky_02_jnt
+    400036: Left_Hand_Pinky_03_jnt
+    400038: Left_Hand_Pinky_End
+    400040: Left_Hand_Ring_01_jnt
+    400042: Left_Hand_Ring_02_jnt
+    400044: Left_Hand_Ring_03_jnt
+    400046: Left_Hand_Ring_End
+    400048: Left_Hand_Thumb_01_jnt
+    400050: Left_Hand_Thumb_02_jnt
+    400052: Left_Hand_Thumb_03_jnt
+    400054: Left_Hand_Thumb_End
+    400056: Left_Knee_jnt
+    400058: Left_Leg_jnt
+    400060: Left_Shoulder_jnt
+    400062: Left_Toe_End
+    400064: Left_Toe_jnt
+    400066: Neck_jnt
+    400068: Right_Clavicle_jnt
+    400070: Right_Elblow_jnt
+    400072: Right_Foot_jnt
+    400074: Right_Hand_Index_01_jnt
+    400076: Right_Hand_Index_02_jnt
+    400078: Right_Hand_Index_03_jnt
+    400080: Right_Hand_Index_End
+    400082: Right_Hand_jnt
+    400084: Right_Hand_Middle_01_jnt
+    400086: Right_Hand_Middle_02_jnt
+    400088: Right_Hand_Middle_03_jnt
+    400090: Right_Hand_Middle_End
+    400092: Right_Hand_Pinky_01_jnt
+    400094: Right_Hand_Pinky_02_jnt
+    400096: Right_Hand_Pinky_03_jnt
+    400098: Right_Hand_Pinky_End
+    400100: Right_Hand_Ring_01_jnt
+    400102: Right_Hand_Ring_02_jnt
+    400104: Right_Hand_Ring_03_jnt
+    400106: Right_Hand_Ring_End
+    400108: Right_Hand_Thumb_01_jnt
+    400110: Right_Hand_Thumb_02_jnt
+    400112: Right_Hand_Thumb_03_jnt
+    400114: Right_Hand_Thumb_End
+    400116: Right_Knee_jnt
+    400118: Right_Leg_jnt
+    400120: Right_Shoulder_jnt
+    400122: Right_Toe_End
+    400124: Right_Toe_jnt
+    400126: //RootNode
+    400128: Skull_Soldier_mesh
+    400130: Spine_01_jnt
+    400132: Spine_02_jnt
+    4300000: Skull_Soldier_mesh
+    7400000: SS_Run
+    9500000: //RootNode
+    13700000: Skull_Soldier_mesh
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: SS_Run
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 13
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0
+        functionName: particulaAlert
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: d31ea3df22f738d409e84200c0d1cf45,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Hips_jnt
+        weight: 1
+      - path: Hips_jnt/Left_Leg_jnt
+        weight: 1
+      - path: Hips_jnt/Left_Leg_jnt/Left_Knee_jnt
+        weight: 1
+      - path: Hips_jnt/Left_Leg_jnt/Left_Knee_jnt/Left_Foot_jnt
+        weight: 1
+      - path: Hips_jnt/Left_Leg_jnt/Left_Knee_jnt/Left_Foot_jnt/Left_Toe_jnt
+        weight: 1
+      - path: Hips_jnt/Left_Leg_jnt/Left_Knee_jnt/Left_Foot_jnt/Left_Toe_jnt/Left_Toe_End
+        weight: 1
+      - path: Hips_jnt/Right_Leg_jnt
+        weight: 1
+      - path: Hips_jnt/Right_Leg_jnt/Right_Knee_jnt
+        weight: 1
+      - path: Hips_jnt/Right_Leg_jnt/Right_Knee_jnt/Right_Foot_jnt
+        weight: 1
+      - path: Hips_jnt/Right_Leg_jnt/Right_Knee_jnt/Right_Foot_jnt/Right_Toe_jnt
+        weight: 1
+      - path: Hips_jnt/Right_Leg_jnt/Right_Knee_jnt/Right_Foot_jnt/Right_Toe_jnt/Right_Toe_End
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt/Chest_jnt
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt/Chest_jnt/Left_Clavicle_jnt
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt/Chest_jnt/Left_Clavicle_jnt/Left_Shoulder_jnt
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt/Chest_jnt/Left_Clavicle_jnt/Left_Shoulder_jnt/Left_Elblow_jnt
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt/Chest_jnt/Left_Clavicle_jnt/Left_Shoulder_jnt/Left_Elblow_jnt/Left_Hand_jnt
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt/Chest_jnt/Left_Clavicle_jnt/Left_Shoulder_jnt/Left_Elblow_jnt/Left_Hand_jnt/Left_Hand_Index_01_jnt
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt/Chest_jnt/Left_Clavicle_jnt/Left_Shoulder_jnt/Left_Elblow_jnt/Left_Hand_jnt/Left_Hand_Index_01_jnt/Left_Hand_Index_02_jnt
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt/Chest_jnt/Left_Clavicle_jnt/Left_Shoulder_jnt/Left_Elblow_jnt/Left_Hand_jnt/Left_Hand_Index_01_jnt/Left_Hand_Index_02_jnt/Left_Hand_Index_03_jnt
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt/Chest_jnt/Left_Clavicle_jnt/Left_Shoulder_jnt/Left_Elblow_jnt/Left_Hand_jnt/Left_Hand_Index_01_jnt/Left_Hand_Index_02_jnt/Left_Hand_Index_03_jnt/Left_Hand_Index_End
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt/Chest_jnt/Left_Clavicle_jnt/Left_Shoulder_jnt/Left_Elblow_jnt/Left_Hand_jnt/Left_Hand_Middle_01_jnt
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt/Chest_jnt/Left_Clavicle_jnt/Left_Shoulder_jnt/Left_Elblow_jnt/Left_Hand_jnt/Left_Hand_Middle_01_jnt/Left_Hand_Middle_02_jnt
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt/Chest_jnt/Left_Clavicle_jnt/Left_Shoulder_jnt/Left_Elblow_jnt/Left_Hand_jnt/Left_Hand_Middle_01_jnt/Left_Hand_Middle_02_jnt/Left_Hand_Middle_03_jnt
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt/Chest_jnt/Left_Clavicle_jnt/Left_Shoulder_jnt/Left_Elblow_jnt/Left_Hand_jnt/Left_Hand_Middle_01_jnt/Left_Hand_Middle_02_jnt/Left_Hand_Middle_03_jnt/Left_Hand_Middle_End
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt/Chest_jnt/Left_Clavicle_jnt/Left_Shoulder_jnt/Left_Elblow_jnt/Left_Hand_jnt/Left_Hand_Pinky_01_jnt
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt/Chest_jnt/Left_Clavicle_jnt/Left_Shoulder_jnt/Left_Elblow_jnt/Left_Hand_jnt/Left_Hand_Pinky_01_jnt/Left_Hand_Pinky_02_jnt
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt/Chest_jnt/Left_Clavicle_jnt/Left_Shoulder_jnt/Left_Elblow_jnt/Left_Hand_jnt/Left_Hand_Pinky_01_jnt/Left_Hand_Pinky_02_jnt/Left_Hand_Pinky_03_jnt
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt/Chest_jnt/Left_Clavicle_jnt/Left_Shoulder_jnt/Left_Elblow_jnt/Left_Hand_jnt/Left_Hand_Pinky_01_jnt/Left_Hand_Pinky_02_jnt/Left_Hand_Pinky_03_jnt/Left_Hand_Pinky_End
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt/Chest_jnt/Left_Clavicle_jnt/Left_Shoulder_jnt/Left_Elblow_jnt/Left_Hand_jnt/Left_Hand_Ring_01_jnt
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt/Chest_jnt/Left_Clavicle_jnt/Left_Shoulder_jnt/Left_Elblow_jnt/Left_Hand_jnt/Left_Hand_Ring_01_jnt/Left_Hand_Ring_02_jnt
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt/Chest_jnt/Left_Clavicle_jnt/Left_Shoulder_jnt/Left_Elblow_jnt/Left_Hand_jnt/Left_Hand_Ring_01_jnt/Left_Hand_Ring_02_jnt/Left_Hand_Ring_03_jnt
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt/Chest_jnt/Left_Clavicle_jnt/Left_Shoulder_jnt/Left_Elblow_jnt/Left_Hand_jnt/Left_Hand_Ring_01_jnt/Left_Hand_Ring_02_jnt/Left_Hand_Ring_03_jnt/Left_Hand_Ring_End
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt/Chest_jnt/Left_Clavicle_jnt/Left_Shoulder_jnt/Left_Elblow_jnt/Left_Hand_jnt/Left_Hand_Thumb_01_jnt
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt/Chest_jnt/Left_Clavicle_jnt/Left_Shoulder_jnt/Left_Elblow_jnt/Left_Hand_jnt/Left_Hand_Thumb_01_jnt/Left_Hand_Thumb_02_jnt
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt/Chest_jnt/Left_Clavicle_jnt/Left_Shoulder_jnt/Left_Elblow_jnt/Left_Hand_jnt/Left_Hand_Thumb_01_jnt/Left_Hand_Thumb_02_jnt/Left_Hand_Thumb_03_jnt
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt/Chest_jnt/Left_Clavicle_jnt/Left_Shoulder_jnt/Left_Elblow_jnt/Left_Hand_jnt/Left_Hand_Thumb_01_jnt/Left_Hand_Thumb_02_jnt/Left_Hand_Thumb_03_jnt/Left_Hand_Thumb_End
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt/Chest_jnt/Neck_jnt
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt/Chest_jnt/Neck_jnt/Head_jnt
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt/Chest_jnt/Neck_jnt/Head_jnt/Head_Top_End
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt/Chest_jnt/Right_Clavicle_jnt
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt/Chest_jnt/Right_Clavicle_jnt/Right_Shoulder_jnt
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt/Chest_jnt/Right_Clavicle_jnt/Right_Shoulder_jnt/Right_Elblow_jnt
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt/Chest_jnt/Right_Clavicle_jnt/Right_Shoulder_jnt/Right_Elblow_jnt/Right_Hand_jnt
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt/Chest_jnt/Right_Clavicle_jnt/Right_Shoulder_jnt/Right_Elblow_jnt/Right_Hand_jnt/Right_Hand_Index_01_jnt
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt/Chest_jnt/Right_Clavicle_jnt/Right_Shoulder_jnt/Right_Elblow_jnt/Right_Hand_jnt/Right_Hand_Index_01_jnt/Right_Hand_Index_02_jnt
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt/Chest_jnt/Right_Clavicle_jnt/Right_Shoulder_jnt/Right_Elblow_jnt/Right_Hand_jnt/Right_Hand_Index_01_jnt/Right_Hand_Index_02_jnt/Right_Hand_Index_03_jnt
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt/Chest_jnt/Right_Clavicle_jnt/Right_Shoulder_jnt/Right_Elblow_jnt/Right_Hand_jnt/Right_Hand_Index_01_jnt/Right_Hand_Index_02_jnt/Right_Hand_Index_03_jnt/Right_Hand_Index_End
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt/Chest_jnt/Right_Clavicle_jnt/Right_Shoulder_jnt/Right_Elblow_jnt/Right_Hand_jnt/Right_Hand_Middle_01_jnt
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt/Chest_jnt/Right_Clavicle_jnt/Right_Shoulder_jnt/Right_Elblow_jnt/Right_Hand_jnt/Right_Hand_Middle_01_jnt/Right_Hand_Middle_02_jnt
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt/Chest_jnt/Right_Clavicle_jnt/Right_Shoulder_jnt/Right_Elblow_jnt/Right_Hand_jnt/Right_Hand_Middle_01_jnt/Right_Hand_Middle_02_jnt/Right_Hand_Middle_03_jnt
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt/Chest_jnt/Right_Clavicle_jnt/Right_Shoulder_jnt/Right_Elblow_jnt/Right_Hand_jnt/Right_Hand_Middle_01_jnt/Right_Hand_Middle_02_jnt/Right_Hand_Middle_03_jnt/Right_Hand_Middle_End
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt/Chest_jnt/Right_Clavicle_jnt/Right_Shoulder_jnt/Right_Elblow_jnt/Right_Hand_jnt/Right_Hand_Pinky_01_jnt
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt/Chest_jnt/Right_Clavicle_jnt/Right_Shoulder_jnt/Right_Elblow_jnt/Right_Hand_jnt/Right_Hand_Pinky_01_jnt/Right_Hand_Pinky_02_jnt
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt/Chest_jnt/Right_Clavicle_jnt/Right_Shoulder_jnt/Right_Elblow_jnt/Right_Hand_jnt/Right_Hand_Pinky_01_jnt/Right_Hand_Pinky_02_jnt/Right_Hand_Pinky_03_jnt
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt/Chest_jnt/Right_Clavicle_jnt/Right_Shoulder_jnt/Right_Elblow_jnt/Right_Hand_jnt/Right_Hand_Pinky_01_jnt/Right_Hand_Pinky_02_jnt/Right_Hand_Pinky_03_jnt/Right_Hand_Pinky_End
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt/Chest_jnt/Right_Clavicle_jnt/Right_Shoulder_jnt/Right_Elblow_jnt/Right_Hand_jnt/Right_Hand_Ring_01_jnt
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt/Chest_jnt/Right_Clavicle_jnt/Right_Shoulder_jnt/Right_Elblow_jnt/Right_Hand_jnt/Right_Hand_Ring_01_jnt/Right_Hand_Ring_02_jnt
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt/Chest_jnt/Right_Clavicle_jnt/Right_Shoulder_jnt/Right_Elblow_jnt/Right_Hand_jnt/Right_Hand_Ring_01_jnt/Right_Hand_Ring_02_jnt/Right_Hand_Ring_03_jnt
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt/Chest_jnt/Right_Clavicle_jnt/Right_Shoulder_jnt/Right_Elblow_jnt/Right_Hand_jnt/Right_Hand_Ring_01_jnt/Right_Hand_Ring_02_jnt/Right_Hand_Ring_03_jnt/Right_Hand_Ring_End
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt/Chest_jnt/Right_Clavicle_jnt/Right_Shoulder_jnt/Right_Elblow_jnt/Right_Hand_jnt/Right_Hand_Thumb_01_jnt
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt/Chest_jnt/Right_Clavicle_jnt/Right_Shoulder_jnt/Right_Elblow_jnt/Right_Hand_jnt/Right_Hand_Thumb_01_jnt/Right_Hand_Thumb_02_jnt
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt/Chest_jnt/Right_Clavicle_jnt/Right_Shoulder_jnt/Right_Elblow_jnt/Right_Hand_jnt/Right_Hand_Thumb_01_jnt/Right_Hand_Thumb_02_jnt/Right_Hand_Thumb_03_jnt
+        weight: 1
+      - path: Hips_jnt/Spine_01_jnt/Spine_02_jnt/Chest_jnt/Right_Clavicle_jnt/Right_Shoulder_jnt/Right_Elblow_jnt/Right_Hand_jnt/Right_Hand_Thumb_01_jnt/Right_Hand_Thumb_02_jnt/Right_Hand_Thumb_03_jnt/Right_Hand_Thumb_End
+        weight: 1
+      - path: Skull_Soldier_mesh
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
