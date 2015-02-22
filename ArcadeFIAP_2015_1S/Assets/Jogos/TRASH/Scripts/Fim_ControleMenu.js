@@ -27,7 +27,7 @@ function Update () {
 		if (Input.GetKeyDown(KeyCode.V) ||
 			Input.GetKeyDown (KeyCode.Return)) {
 			somConfirma.Play ();
-			Application.LoadLevel(0);
+			Application.LoadLevel("TRASH_Inicio");
 		}
 	break;
 		
@@ -48,7 +48,7 @@ if (podeMudar == true) {
 }
 
 //mudar entre botoes pelo input
-	var direcao = Input.GetAxis("Vertical");
+	var direcao = ArcadeFIAP.Eixo(1, EEixo.VERTICAL);
 	//quer diminuir o btnSelecionado
 	if (direcao > 0 && podeMudar) {
 		btnSelecionado--;

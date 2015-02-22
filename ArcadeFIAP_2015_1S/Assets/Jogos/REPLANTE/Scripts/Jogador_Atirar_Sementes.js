@@ -20,7 +20,7 @@ function Update () {
 	}
 	
 	if ((curTiro > minTiro) && atirou == false){
-		if (Input.GetKeyUp(KeyCode.K)) {
+		if (ArcadeFIAP.SoltouBotao(1, EBotao.B)) {
 			atirou = true;
 			var semente : Transform = Instantiate (
    			prefabSemente, 

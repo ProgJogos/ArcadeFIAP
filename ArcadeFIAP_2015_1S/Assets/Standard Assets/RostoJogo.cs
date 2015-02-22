@@ -5,6 +5,7 @@ public class RostoJogo : MonoBehaviour
 {
 	public string nomeJogo;
 	public InfoJogo info;
+	public int ordem;
 	
 	void Start ()
 	{

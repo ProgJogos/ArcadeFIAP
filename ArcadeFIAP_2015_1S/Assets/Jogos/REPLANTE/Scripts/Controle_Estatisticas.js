@@ -2,7 +2,7 @@
 
 
 function Update (){
-	if (Input.GetKeyDown(KeyCode.K) || Input.GetKeyDown(KeyCode.J)){
-		Application.LoadLevel ("Menu");
+	if (ArcadeFIAP.ApertouBotao(1, EBotao.A) || ArcadeFIAP.ApertouBotao(1, EBotao.B)){
+		Application.LoadLevel("REPLANTE_Inicio");
 	}
 }

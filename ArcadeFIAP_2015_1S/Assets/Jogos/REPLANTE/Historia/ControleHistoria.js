@@ -5,12 +5,12 @@ function Start () {
 }
 
 function Update (){
-	if (Input.GetKeyDown(KeyCode.K)){
-		Application.LoadLevel ("Start");
+	if (ArcadeFIAP.ApertouBotao(1, EBotao.B)){
+		Application.LoadLevel ("REPLANTE_Start");
 	}
 }
 
 function ControlaHistoria() {
 	yield WaitForSeconds (11);
-	Application.LoadLevel ("Start");
+	Application.LoadLevel ("REPLANTE_Start");
 }

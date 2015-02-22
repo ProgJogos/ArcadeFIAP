@@ -17,3 +17,15 @@ EditorBuildSettings:
     path: Assets/Jogos/NEDMEG/Scene/NEDMEG_GameOver.unity
   - enabled: 1
     path: Assets/Jogos/NEDMEG/Scene/NEDMEG_wow.unity
+  - enabled: 1
+    path: Assets/Jogos/REPLANTE/REPLANTE_Creditos.unity
+  - enabled: 1
+    path: Assets/Jogos/REPLANTE/REPLANTE_Estatisticas.unity
+  - enabled: 1
+    path: Assets/Jogos/REPLANTE/REPLANTE_GameOver.unity
+  - enabled: 1
+    path: Assets/Jogos/REPLANTE/REPLANTE_Historia.unity
+  - enabled: 1
+    path: Assets/Jogos/REPLANTE/REPLANTE_Inicio.unity
+  - enabled: 1
+    path: Assets/Jogos/REPLANTE/REPLANTE_Start.unity

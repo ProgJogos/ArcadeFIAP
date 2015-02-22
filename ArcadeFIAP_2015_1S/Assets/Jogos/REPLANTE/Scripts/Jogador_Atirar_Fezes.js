@@ -12,7 +12,7 @@ function Start () {
 
 function Update () {
 	
-	if (Input.GetKeyDown(KeyCode.J)){
+	if (ArcadeFIAP.ApertouBotao(1, EBotao.A)){
 		animadorPai.SetBool("Segurando", true);
 		if (Jogador_Dano.jogadorColidiu == true){
 			animadorPai.SetBool("Colidiu", false);
@@ -20,7 +20,7 @@ function Update () {
 	}
 	
 	
-	if ((Input.GetKeyUp(KeyCode.J)) && atirou == false){
+	if (ArcadeFIAP.SoltouBotao(1, EBotao.A) && atirou == false){
 		atirou = true;
 		var fezes1 : Transform = Instantiate (
    		prefabFezes1, 
