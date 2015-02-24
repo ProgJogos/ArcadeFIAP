@@ -6,6 +6,8 @@ public class EfeitosMenu : MonoBehaviour
 	public Material skybox;
 	public Color corInicial;
 	public Color corFinal;
+	public AudioClip[] nomesA;
+	public AudioClip[] nomesG;
 
 	// Use this for initialization
 	void Start ()
@@ -17,9 +19,14 @@ public class EfeitosMenu : MonoBehaviour
 		Go.to (skybox, 10, tweenCor);
 	}
 	
-	// Update is called once per frame
-	void Update ()
+	public void TocarNome (int ind)
 	{
-	
+		audio.Stop ();
+		if (nomesA.Length > ind) {
+			if (Random.value <= 0.5f)
+				audio.PlayOneShot (nomesA [ind]);
+			else 
+				audio.PlayOneShot (nomesG [ind]);
+		}
 	}
 }

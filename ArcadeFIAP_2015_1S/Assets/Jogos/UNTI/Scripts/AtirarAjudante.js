@@ -12,7 +12,7 @@ animator = GetComponent("Animator");
 
 }
 function Update () {
-	if(ArcadeFIAP.Eixo(1, EEixo.VERTICAL) > 0 && contador <= 4){
+	if(ArcadeFIAP.ApertouBotao(1, EBotao.A) && contador <= 4){
 	audio.PlayOneShot (somtiroajudante);
 		
 		var prefabTiro : Transform;
@@ -24,7 +24,7 @@ function Update () {
 			
 	}
 	
-		if(ArcadeFIAP.Eixo(1, EEixo.VERTICAL) < 0 && contador <= 4){
+		if(ArcadeFIAP.ApertouBotao(1, EBotao.A) && contador <= 4){
 		audio.PlayOneShot (somtiroajudante);
 		
 		var prefabTiro2 : Transform;

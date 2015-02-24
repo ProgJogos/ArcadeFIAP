@@ -32,6 +32,7 @@ public class GerenteArcade : MonoBehaviour
 	
 	void Awake ()
 	{
+		Screen.showCursor = false;
 		if (i != null) {
 			Destroy (this.gameObject);
 			return;
@@ -182,6 +183,7 @@ public class GerenteArcade : MonoBehaviour
 							indJogo = jogos.Count - 1;
 						}
 					}
+					Camera.main.GetComponent<EfeitosMenu> ().TocarNome (indJogo);
 					Go.to (Camera.main.transform, transicao, new GoTweenConfig ()
 					       .position (new Vector3 (jogos [indJogo].transform.position.x, 
 					                        Camera.main.transform.position.y, 
@@ -189,6 +191,7 @@ public class GerenteArcade : MonoBehaviour
 					       .setEaseType (easing)
 					       .onComplete (f => {
 						ativo = true;
+						
 					}));
 					return;
 				}
