@@ -14,9 +14,7 @@ Lista dos jogos que já estão integrados no Arcade.
 
 ###  1o Semestre 2014
 
-##### Prontos
-
-- **Ned Meg.** Ok.
+- **Ned Meg.** Corrigir problemas com `Time.deltaTime` e velocidade do personagem.
 - **T.R.A.S.H.** Ok.
 - **Replante!** Ok.
 - **O mundo destruído de Unti.** O Gosmito fica invisível quando leva tiro.
