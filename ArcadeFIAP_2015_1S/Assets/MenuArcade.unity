@@ -376,6 +376,46 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 153713973}
+--- !u!1 &170606201
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 170606203}
+  - 114: {fileID: 170606202}
+  m_Layer: 0
+  m_Name: ArcadeFIAP
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &170606202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 170606201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd63b1630dd7ef74cb20617fb8770a5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nomeCenaInicial: MenuArcade
+--- !u!4 &170606203
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 170606201}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 16.4154148, y: -10.592308, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
 --- !u!1 &172131583
 GameObject:
   m_ObjectHideFlags: 0
@@ -554,9 +594,9 @@ GameObject:
   - 4: {fileID: 185631868}
   - 114: {fileID: 185631867}
   m_Layer: 0
-  m_Name: ArcadeFIAP
+  m_Name: MenuArcade
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -2065832391, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -798,7 +838,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbe43d91898b63d42bf26c311aa94a47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nomeJogo: NEDMEG
+  nomeJogo: TesteJogo
   info:
     partidas: 0
     votosPositivos: 0
@@ -1073,7 +1113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbe43d91898b63d42bf26c311aa94a47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nomeJogo: TRASH
+  nomeJogo: TesteJogo
   info:
     partidas: 0
     votosPositivos: 0
@@ -1444,7 +1484,7 @@ AudioListener:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 654085058}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!124 &654085060
 Behaviour:
   m_ObjectHideFlags: 0
@@ -1540,7 +1580,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1778,7 +1818,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 924875893}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: 303f6d83d1af87b45a03e5fb6a3227cf, type: 3}
   m_PlayOnAwake: 1
@@ -2392,7 +2432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbe43d91898b63d42bf26c311aa94a47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nomeJogo: UNTI
+  nomeJogo: TesteJogo
   info:
     partidas: 0
     votosPositivos: 0
@@ -3295,7 +3335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbe43d91898b63d42bf26c311aa94a47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nomeJogo: REPLANTE
+  nomeJogo: TesteJogo
   info:
     partidas: 0
     votosPositivos: 0
@@ -3780,7 +3820,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 458634, guid: 4a27863b6da364c44908335f1dd1e8a6, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 11458634, guid: 4a27863b6da364c44908335f1dd1e8a6, type: 2}
       propertyPath: jogos.Array.data[0]
@@ -3794,6 +3834,15 @@ Prefab:
       propertyPath: jogos.Array.data[2]
       value: 
       objectReference: {fileID: 2050385508}
+    - target: {fileID: 158634, guid: 4a27863b6da364c44908335f1dd1e8a6, type: 2}
+      propertyPath: m_Name
+      value: MenuArcade
+      objectReference: {fileID: 0}
+    - target: {fileID: 158634, guid: 4a27863b6da364c44908335f1dd1e8a6, type: 2}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -2065832391, guid: 0000000000000000d000000000000000,
+        type: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4a27863b6da364c44908335f1dd1e8a6, type: 2}
   m_RootGameObject: {fileID: 185631866}

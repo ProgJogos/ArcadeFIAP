@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Diagnostics;
 
 public enum EEtapa
 {
@@ -25,7 +26,6 @@ public class GerenteArcade : MonoBehaviour
 	public bool temMenu = false;
 	
 	public static EEtapa etapa = EEtapa.JOGO;
-	public static GerenteArcade i;
 	public static float timerJogo;
 	public bool votacaoPermitida = false;
 	public static int indJogo = -1;
@@ -33,36 +33,42 @@ public class GerenteArcade : MonoBehaviour
 	void Awake ()
 	{
 		Screen.showCursor = false;
-		if (i != null) {
-			Destroy (this.gameObject);
-			return;
-		}
-		temMenu = false;
-		if (Application.loadedLevelName == "MenuArcade") {
-			temMenu = true;
-			etapa = EEtapa.MENU_JOGOS;
-		} else {
-			etapa = EEtapa.JOGO;
-		}
-		i = this;
-		DontDestroyOnLoad (this.gameObject);
+		etapa = EEtapa.MENU_JOGOS;
 		primeiroFrame = true;
+		var rostos = GameObject.FindObjectsOfType<RostoJogo> ();
+		jogos = new List<RostoJogo> (rostos.OrderBy (r => r.ordem));
 		if (indJogo < 0)
 			indJogo = Random.Range (0, jogos.Count);
+		fade = GameObject.Find ("Fade").renderer;
+		fade.material.color = Color.black;
+		canvasInstrucoes = GameObject.Find ("CanvasInstrucoes").GetComponent<Canvas> ();
+		canvasInstrucoes.enabled = false;
+		canvasVotacao = GameObject.Find ("CanvasVotacao").GetComponent<Canvas> ();
+		canvasVotacao.enabled = false;
+		Camera.main.transform.position = new Vector3 (
+			jogos [indJogo].transform.position.x, 
+			Camera.main.transform.position.y, 
+			Camera.main.transform.position.z);
+		Go.to (fade, transicao * 2, new GoTweenConfig ()
+		       .materialColor (Color.clear)
+		       .onComplete (f => {
+			ativo = true;
+			canvasInstrucoes.enabled = true;
+		}));
 	}
 	
 	void Update ()
 	{
 		//zerar metricas
 		if (Input.GetKey (KeyCode.F1) && Input.GetKey (KeyCode.F2) && !Metricas.zerado) {
-			Debug.Log ("ZERAR!");
+			UnityEngine.Debug.Log ("ZERAR!");
 			Metricas.Zerar ();
 		}
 		switch (etapa) {
 		case EEtapa.JOGO:	
 			timerJogo += Time.deltaTime;
 			// FIXME mudar para 60 no build final
-			if (timerJogo >= 2) {
+			if (timerJogo >= 5) {
 				votacaoPermitida = true;
 			}
 			
@@ -80,14 +86,9 @@ public class GerenteArcade : MonoBehaviour
 		case EEtapa.VOTACAO:
 			if (primeiroFrame) {
 				primeiroFrame = false;
-				var rostos = GameObject.FindObjectsOfType<RostoJogo> ();
-				jogos = new List<RostoJogo> (rostos.OrderBy (r => r.ordem));
 				votacaoPermitida = false;
-				canvasInstrucoes = GameObject.Find ("CanvasInstrucoes").GetComponent<Canvas> ();
-				canvasVotacao = GameObject.Find ("CanvasVotacao").GetComponent<Canvas> ();
 				canvasVotacao.enabled = true;
 				canvasVotacao.transform.localScale = Vector3.one;
-				fade = GameObject.Find ("Fade").renderer;
 				fade.material.color = Color.black;
 				Go.from (canvasVotacao.transform, transicao / 2, new GoTweenConfig ()
 				         .scale (0.001f)
@@ -96,7 +97,7 @@ public class GerenteArcade : MonoBehaviour
 			
 			canvasInstrucoes.enabled = false;
 			if (ArcadeFIAP.ApertouBotao (1, EBotao.A)) {
-				Debug.Log ("Voto positivo");
+				UnityEngine.Debug.Log ("Voto positivo");
 				InfoJogo.infos [jogos [indJogo].nomeJogo].partidas++;
 				InfoJogo.infos [jogos [indJogo].nomeJogo].votosPositivos++;
 				Metricas.SalvarLista ();
@@ -113,7 +114,7 @@ public class GerenteArcade : MonoBehaviour
 			}
 			// voto negativo
 			if (ArcadeFIAP.ApertouBotao (1, EBotao.B)) {
-				Debug.Log ("Voto negativo");
+				UnityEngine.Debug.Log ("Voto negativo");
 				InfoJogo.infos [jogos [indJogo].nomeJogo].partidas++;
 				InfoJogo.infos [jogos [indJogo].nomeJogo].votosNegativos++;
 				Metricas.SalvarLista ();
@@ -133,12 +134,6 @@ public class GerenteArcade : MonoBehaviour
 		case EEtapa.MENU_JOGOS: 
 			if (primeiroFrame) {
 				primeiroFrame = false;
-				
-				var rostos = GameObject.FindObjectsOfType<RostoJogo> ();
-				jogos = new List<RostoJogo> (rostos.OrderBy (r => r.ordem));
-				canvasInstrucoes = GameObject.Find ("CanvasInstrucoes").GetComponent<Canvas> ();
-				canvasVotacao = GameObject.Find ("CanvasVotacao").GetComponent<Canvas> ();
-				fade = GameObject.Find ("Fade").renderer;
 				fade.material.color = Color.black;
 				canvasVotacao.enabled = false;
 				Camera.main.transform.position = new Vector3 (
@@ -206,19 +201,6 @@ public class GerenteArcade : MonoBehaviour
 		print ("TerminarJogo");
 		etapa = (votacaoPermitida) ? EEtapa.VOTACAO : EEtapa.MENU_JOGOS;
 		primeiroFrame = true;
-		
-		if (temMenu) {
-			Application.LoadLevel ("MenuArcade");
-		} else {
-			etapa = EEtapa.JOGO;
-			#if UNITY_EDITOR
-			Debug.Log ("Sair");
-			#else
-			Application.Quit ();
-			#endif
-		}
-		
-		
 	}
 	
 	void ReiniciarJogo ()
@@ -234,7 +216,19 @@ public class GerenteArcade : MonoBehaviour
 		votacaoPermitida = false;
 		etapa = EEtapa.JOGO;
 		primeiroFrame = true;
-		Application.LoadLevel (jogos [indJogo].nomeJogo + "_Inicio");
+		float tempo = Time.realtimeSinceStartup;
+		#if UNITY_EDITOR
+		var proc = Process.Start ("notepad.exe");
+		#else
+		var proc = Process.Start (jogos [indJogo].nomeJogo + ".exe");
+		#endif
+		proc.WaitForExit ();
+		tempo = Time.realtimeSinceStartup - tempo;
+		if (tempo > 2f) {
+			votacaoPermitida = true;
+		}
+		print (tempo + " | Votacao: " + votacaoPermitida);
+		TerminarJogo ();
 	}
 	
 	IEnumerator SalvarLogs ()
