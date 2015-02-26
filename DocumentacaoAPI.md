@@ -1,12 +1,12 @@
 # Documentação da API do ArcadeFIAP
 
-Aqui está a documentação da API do Arcade, ou seja, as funções que devem ser usadas para acessar funcionalidades específicas da máquina. Para utilizá-la, o script *ArcadeFIAP.cs* deve estar na pasta `Assets` de seu projeto e o arquivo *InputManager.asset* deve estar na pasta `ProjectSettings`.
+Aqui está a documentação da API do Arcade, ou seja, as funções que devem ser usadas para acessar funcionalidades específicas da máquina.
 
 ## Fluxo de jogo
-No software final, o fluxo do jogo é controlado por uma classe `GerenteArcade`. Para isso, alguns comandos do sistema de input são reservados para o funcionamento dessa classe e por isso esses comandos **não devem ser usadas para a lógica interna do seu jogo**. Veja a lista abaixo:
+No software final, o fluxo de execução do arcade é controlado pelo prefab `ArcadeFIAP`. Para isso, alguns comandos do sistema de input são reservados para o funcionamento interno da máquina e esses comandos **não devem ser usadas para a lógica interna do seu jogo**. Veja a lista abaixo:
 
-- **HOME + START de qualquer jogador:** sai do jogo atual e vai para a tela de escolha de jogos.
-- **HOME do jogador 1 + HOME do jogador 2:** reinicia o jogo atual.
+- **Botão `EBotao.MENU` de qualquer jogador:** sai do jogo atual e vai para a tela de escolha de jogos.
+- **Botão `EBotao.START` de qualquer jogador:** reinicia o jogo atual. No menu, inicia o jogo escolhido.
 
 ## Input
 
@@ -23,15 +23,18 @@ B | 2 | L
 Start | 3 | I
 Menu | 4 | O
 
-##### `enum EBotao`
+---
+#### `enum EBotao`
 
-Esse enum é usado como parâmetro para receber informações sobre cada um dos botões do arcade. Os valores possíveis são: `A`, `B`, `START` e `MENU`.
+Esse enum é usado como parâmetro para receber informações sobre cada um dos botões do arcade. Os valores possíveis são: `A`, `B`, `START`, `MENU`, `CIMA`,  `BAIXO`,  `ESQUERDA` e  `DIREITA`.
 
-##### `enum EEixo`
+---
+#### `enum EEixo`
 
 Esse enum é usado para receber informações sobre o movimento direcional do jogador. Os valores possíveis são `VERTICAL` e  `HORIZONTAL`.
 
-##### `bool ApertouBotao (int jogador, EBotao botao)`
+---
+#### `bool ApertouBotao (int jogador, EBotao botao)`
 
 Retorna `true` quando o botão foi pressionado **neste** frame. Parecido com `Input.GetButtonDown`.
 
@@ -41,7 +44,8 @@ if (ArcadeFIAP.ApertouBotao(2, EBotao.A) {
 }
 ```
 
-##### `bool SoltouBotao (int jogador, EBotao botao)`
+---
+#### `bool SoltouBotao (int jogador, EBotao botao)`
 
 Retorna `true` quando o botão foi solto **neste** frame. Parecido com `Input.GetButtonUp`.
 
@@ -51,7 +55,8 @@ if (ArcadeFIAP.SoltouBotao(1, EBotao.B) {
 }
 ```
 
-##### `bool BotaoApertado (int jogador, EBotao botao)`
+---
+#### `bool BotaoApertado (int jogador, EBotao botao)`
 
 Retorna `true` quando o botão está pressionado. Parecido com `Input.GetButton`.
 
@@ -64,7 +69,8 @@ else {
 }
 ```
 
-##### `float Eixo (int jogador, EEixo eixo)`
+---
+#### `float Eixo (int jogador, EEixo eixo)`
 
 Devolve o valor -1 a 1 relativo ao eixo direcional do jogador desejado. Parecido com o `Input.GetAxis`.
 
