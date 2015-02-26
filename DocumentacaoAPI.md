@@ -1,5 +1,6 @@
 ## Instruções para uso
 
+<<<<<<< HEAD
 Faça o download do arquivo **ArcadeFIAP_Pacote.zip**, extraia para uma pasta no seu PC. Siga as instruções no arquivo `LEIA-ME.txt`. O seu projeto está pronto para usar a classe `ArcadeFIAP` para controlar input. Para mais detalhes em como usar a API, leia o [arquivo de documentação da API](DocumentacaoAPI.md).
 
 Aqui está a documentação da API do Arcade, ou seja, as funções que devem ser usadas para acessar funcionalidades específicas da máquina.
@@ -8,6 +9,13 @@ Aqui está a documentação da API do Arcade, ou seja, as funções que devem se
 
 No software final, o fluxo de execução do arcade é controlado pelo prefab `ArcadeFIAP`. Para isso, alguns comandos do sistema de input são reservados para o funcionamento interno da máquina e esses comandos **não devem ser usadas para a lógica interna do seu jogo**. Veja a lista abaixo:
 
+=======
+Aqui está a documentação da API do Arcade, ou seja, as funções que devem ser usadas para acessar funcionalidades específicas da máquina.
+
+## Fluxo de jogo
+No software final, o fluxo de execução do arcade é controlado pelo prefab `ArcadeFIAP`. Para isso, alguns comandos do sistema de input são reservados para o funcionamento interno da máquina e esses comandos **não devem ser usadas para a lógica interna do seu jogo**. Veja a lista abaixo:
+
+>>>>>>> origin/master
 - **Botão `EBotao.MENU` de qualquer jogador:** sai do jogo atual e vai para a tela de escolha de jogos.
 - **Botão `EBotao.START` de qualquer jogador:** reinicia o jogo atual. No menu, inicia o jogo escolhido.
 
