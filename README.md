@@ -1,5 +1,7 @@
 # Arcade FIAP
 
+![Teste](http://i.imgur.com/tTqJ4Pd.gif?1)
+
 Repositório com o software para o arcade dos projetos integrados dos alunos de Programação de Jogos Digitais da FIAP.
 
 ## Integração de jogos
