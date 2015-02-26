@@ -1,11 +1,14 @@
-﻿using UnityEngine;
+using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
-public class RostoJogo : MonoBehaviour
+public class Capa : MonoBehaviour
 {
 	public string nomeJogo;
+	public Text txtNome;
 	public InfoJogo info;
 	public int ordem;
+	public Image imagem;
 	
 	void Start ()
 	{

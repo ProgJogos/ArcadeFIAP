@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Diagnostics;
+using System;
+using System.IO;
 
 public enum EEtapa
 {
@@ -13,7 +15,9 @@ public enum EEtapa
 
 public class GerenteArcade : MonoBehaviour
 {
-	public List<RostoJogo> jogos;
+	public Capa prefabCapa;
+
+	public List<Capa> jogos;
 	public bool ativo;
 	public float transicao = 0.35f;
 	public GoEaseType easing = GoEaseType.CubicInOut;
@@ -32,19 +36,28 @@ public class GerenteArcade : MonoBehaviour
 	
 	void Awake ()
 	{
+		Config.CarregarJogos ();
+		Application.runInBackground = true;
+		Screen.fullScreen = true;
 		Screen.showCursor = false;
 		etapa = EEtapa.MENU_JOGOS;
 		primeiroFrame = true;
-		var rostos = GameObject.FindObjectsOfType<RostoJogo> ();
-		jogos = new List<RostoJogo> (rostos.OrderBy (r => r.ordem));
-		if (indJogo < 0)
-			indJogo = Random.Range (0, jogos.Count);
+		jogos = new List<Capa> ();
+		for (int i= 0; i < Config.jogos.Count; i++) {
+			Capa novoJogo = Instantiate (prefabCapa, 
+                new Vector3 (30 * i, 0, 0), Quaternion.Euler (0, -20, 0)) as Capa;
+			StartCoroutine (CarregarCapa (novoJogo, i));
+			jogos.Add (novoJogo);
+		}
+		jogos = jogos.OrderBy (r => r.ordem).ToList ();
 		fade = GameObject.Find ("Fade").renderer;
 		fade.material.color = Color.black;
 		canvasInstrucoes = GameObject.Find ("CanvasInstrucoes").GetComponent<Canvas> ();
 		canvasInstrucoes.enabled = false;
 		canvasVotacao = GameObject.Find ("CanvasVotacao").GetComponent<Canvas> ();
 		canvasVotacao.enabled = false;
+		if (indJogo < 0)
+			indJogo = UnityEngine.Random.Range (0, jogos.Count);
 		Camera.main.transform.position = new Vector3 (
 			jogos [indJogo].transform.position.x, 
 			Camera.main.transform.position.y, 
@@ -65,23 +78,6 @@ public class GerenteArcade : MonoBehaviour
 			Metricas.Zerar ();
 		}
 		switch (etapa) {
-		case EEtapa.JOGO:	
-			timerJogo += Time.deltaTime;
-			// FIXME mudar para 60 no build final
-			if (timerJogo >= 5) {
-				votacaoPermitida = true;
-			}
-			
-			if (ArcadeFIAP.BotaoApertado (1, EBotao.MENU) && ArcadeFIAP.BotaoApertado (2, EBotao.MENU) &&
-				timerJogo > 1) {
-				ReiniciarJogo ();
-			}
-			
-			if ((ArcadeFIAP.BotaoApertado (1, EBotao.MENU) && ArcadeFIAP.BotaoApertado (1, EBotao.START)) ||
-				(ArcadeFIAP.BotaoApertado (2, EBotao.MENU) && ArcadeFIAP.BotaoApertado (2, EBotao.START))) {
-				TerminarJogo ();
-			}
-			break;
 			
 		case EEtapa.VOTACAO:
 			if (primeiroFrame) {
@@ -97,7 +93,7 @@ public class GerenteArcade : MonoBehaviour
 			
 			canvasInstrucoes.enabled = false;
 			if (ArcadeFIAP.ApertouBotao (1, EBotao.A)) {
-				UnityEngine.Debug.Log ("Voto positivo");
+				//UnityEngine.Debug.Log ("Voto positivo");
 				InfoJogo.infos [jogos [indJogo].nomeJogo].partidas++;
 				InfoJogo.infos [jogos [indJogo].nomeJogo].votosPositivos++;
 				Metricas.SalvarLista ();
@@ -114,7 +110,7 @@ public class GerenteArcade : MonoBehaviour
 			}
 			// voto negativo
 			if (ArcadeFIAP.ApertouBotao (1, EBotao.B)) {
-				UnityEngine.Debug.Log ("Voto negativo");
+				//UnityEngine.Debug.Log ("Voto negativo");
 				InfoJogo.infos [jogos [indJogo].nomeJogo].partidas++;
 				InfoJogo.infos [jogos [indJogo].nomeJogo].votosNegativos++;
 				Metricas.SalvarLista ();
@@ -223,12 +219,14 @@ public class GerenteArcade : MonoBehaviour
 		var proc = Process.Start (jogos [indJogo].nomeJogo + ".exe");
 		#endif
 		proc.WaitForExit ();
+		proc = null;
 		tempo = Time.realtimeSinceStartup - tempo;
 		if (tempo > 2f) {
 			votacaoPermitida = true;
 		}
-		print (tempo + " | Votacao: " + votacaoPermitida);
+		// print (tempo + " | Votacao: " + votacaoPermitida);
 		TerminarJogo ();
+		
 	}
 	
 	IEnumerator SalvarLogs ()
@@ -244,5 +242,24 @@ public class GerenteArcade : MonoBehaviour
 		if (temMenu)
 			Metricas.SalvarLista ();
 		PlayerPrefs.Save ();
+	}
+	
+	IEnumerator CarregarCapa (Capa capa, int i)
+	{
+		capa.nomeJogo = Config.jogos [i].id;
+		capa.txtNome.text = Config.jogos [i].titulo;
+		#if UNITY_EDITOR
+		var url = "file://" + Application.dataPath.Replace (@"\", "/") + "/" + Config.jogos [i].imagem;
+		#else
+		var url = "file://" + Environment.CurrentDirectory.Replace (@"\", "/") + "/" + Config.jogos [i].imagem;
+		#endif
+		var www = new WWW (url);
+		yield return www;
+		var img = Sprite.Create (
+			www.texture,
+			new Rect (0, 0, 800, 450),
+			new Vector2 (0.5f, 0.5f));
+		capa.imagem.sprite = img;
+		capa.ordem = i;
 	}
 }
